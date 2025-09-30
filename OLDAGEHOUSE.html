@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethesda Foundation</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join Bethesda Foundation in our mission to bring hope and help to those in need through community support and charitable initiatives.">
+    <meta name="keywords" content="charity, foundation, non-profit, community support, Bethesda, donation, volunteer">
+    <meta name="author" content="Bethesda Foundation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.facebook.com/people/Bethesda-Home-for-Aged-Trust/100067110367164/"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="Bethesda Foundation - Making a Difference">
+    <meta property="og:description" content="Join Bethesda Foundation in our mission to bring hope and help to those in need through community support and charitable initiatives.">
+    <meta property="og:image" content=""> <!-- Replace with a static image URL -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bethesda-foundation.org/"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="Bethesda Foundation - Making a Difference">
+    <meta property="twitter:description" content="Join Bethesda Foundation in our mission to bring hope and help to those in need through community support and charitable initiatives.">
+    <meta property="twitter:image" content="https://plus.unsplash.com/premium_photo-1723867352391-da3422ddc795?q=80&w=2138&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> <!-- Replace with a static image URL -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1756198193944-7401d3593ed9?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .about-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1508169351866-777fc0047ac5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .contact-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+        .bank-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+        .location-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1619468129361-605ebea04b44?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .donation-card:hover, .bank-card:hover, .contact-card:hover, .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link.active {
+          color: #ef4444; /* red-500 */
+          font-weight: 500;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans bg-white">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#home" class="flex items-center space-x-2">
+                    <i data-feather="users" class="text-red-500"></i>
+                    <span class="text-xl font-bold text-gray-800">Bethesda</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link transition text-gray-600 hover:text-red-500">Home</a>
+                    <a href="#about" class="nav-link transition text-gray-600 hover:text-red-500">About</a>
+                    <a href="#contact" class="nav-link transition text-gray-600 hover:text-red-500">Contact</a>
+                    <a href="#location" class="nav-link transition text-gray-600 hover:text-red-500">Location</a>
+                    <a href="#donate" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">Donate</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4">
+            <a href="#home" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">Home</a>
+            <a href="#about" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">About</a>
+            <a href="#contact" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">Contact</a>
+            <a href="#location" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">Location</a>
+            <a href="#donate" class="nav-link-mobile block py-2 text-red-500 font-medium">Donate</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero-bg text-white py-20 md:py-32">
+            <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Bethesda - Making a Difference</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Join Bethesda in our mission to bring hope and help to those in need through community support and charitable initiatives.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#donate" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md transition duration-300">Donate Now</a>
+                    <a href="#about" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-md transition duration-300">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Our Impact</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                        <i data-feather="users" class="w-12 h-12 mx-auto text-red-500 mb-4"></i>
+                        <h3 class="text-4xl font-bold text-gray-800 mb-2">1000+</h3>
+                        <p class="text-gray-600">People Helped</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                        <i data-feather="globe" class="w-12 h-12 mx-auto text-red-500 mb-4"></i>
+                        <h3 class="text-4xl font-bold text-gray-800 mb-2">15+</h3>
+                        <p class="text-gray-600">Communities Served</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                        <i data-feather="award" class="w-12 h-12 mx-auto text-red-500 mb-4"></i>
+                        <h3 class="text-4xl font-bold text-gray-800 mb-2">50+</h3>
+                        <p class="text-gray-600">Volunteers Engaged</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-red-500 text-white">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Join Our Cause</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Your support can change lives. Become a volunteer or make a donation today.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                    
+                    <a href="#contact" class="bg-transparent hover:bg-white hover:text-red-500 border-2 border-white font-bold py-3 px-6 rounded-md transition duration-300">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="pt-16">
+            <div class="about-hero text-white py-20 md:py-32">
+                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Story</h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Committed to creating lasting change through compassion and action</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Mission</h2>
+                        <p class="text-gray-600 mb-6">At Bethesda, we believe that every life has value and every individual deserves the chance to live with dignity. Too many people are still struggling for the basics—food, education, and healthcare—that so many of us take for granted. With compassion at the core of our mission, we reach out to those in need, offering not just resources but also hope and encouragement.</p>
+
+                              <p>Through our faith-driven programs, we walk alongside families, helping them rebuild their lives with strength and courage. Every meal shared, every child educated, and every life healed is a step toward a future where no one is forgotten. We are more than an organization—we are a family united by love, faith, and the belief that together, we can create lasting change.</p>
+                    </div>
+                    <div data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Our Team" class="rounded-lg shadow-lg w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Core Values</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                        <i data-feather="heart" class="w-10 h-10 text-red-500 mb-4 mx-auto"></i>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Compassion</h3>
+                        <p class="text-gray-600">We approach every situation with empathy and understanding, treating all individuals with dignity and respect.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                        <i data-feather="shield" class="w-10 h-10 text-red-500 mb-4 mx-auto"></i>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Integrity</h3>
+                        <p class="text-gray-600">We maintain the highest ethical standards, ensuring transparency in all our operations and use of funds.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                        <i data-feather="users" class="w-10 h-10 text-red-500 mb-4 mx-auto"></i>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Community</h3>
+                        <p class="text-gray-600">We believe in working with communities, not just for them, fostering sustainable solutions from within.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Our Journey</h2>
+                <div class="relative">
+                    <div class="absolute left-1/2 w-0.5 bg-red-200 h-full -translate-x-1/2"></div>
+                    <div class="relative flex items-center mb-12 justify-start md:justify-start" data-aos="fade-right">
+                        <div class="w-full md:w-5/12 md:pl-10">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <p class="text-red-500 font-semibold">2016</p>
+                                <h4 class="text-xl font-bold my-1 text-gray-800">Foundation Established</h4>
+                                <p class="text-gray-800">Started as a small community initiative helping 5 families in our local area.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="relative flex items-center mb-12 justify-start md:justify-end" data-aos="fade-left">
+                        <div class="w-full md:w-5/12 md:pr-10">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <p class="text-red-500 font-semibold">2018</p>
+                                <h4 class="text-xl font-bold my-1 text-gray-800">Expansion of our community</h4>
+                                <p class="text-gray-800">We grew our community to over 40 family members, reaching more people than ever with our mission of hope and support.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="relative flex items-center mb-12 justify-start md:justify-start" data-aos="fade-right">
+                        <div class="w-full md:w-5/12 md:pl-10">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <p class="text-red-500 font-semibold">2019</p>
+                                <h4 class="text-xl font-bold my-1 text-gray-800">Education Initiative</h4>
+                                <p class="text-gray-800">Launched our flagship education program, funding 2 schools in underserved regions.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="relative flex items-center mb-12 justify-start md:justify-end" data-aos="fade-left">
+                        <div class="w-full md:w-5/12 md:pr-10">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <p class="text-red-500 font-semibold">2020</p>
+                                <h4 class="text-xl font-bold my-1 text-gray-800">COVID-19 Response</h4>
+                                <p class="text-gray-800">Provided emergency relief to over 23+ families affected by the pandemic.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="relative flex items-center mb-12 justify-start md:justify-start" data-aos="fade-right">
+                        <div class="w-full md:w-5/12 md:pl-10">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <p class="text-red-500 font-semibold">Present</p>
+                                <h4 class="text-xl font-bold my-1 text-gray-800">Ongoing Impact</h4>
+                                <p class="text-gray-800">Continuing our work across Karnataka & Kerala with a team of 60+ dedicated staff and volunteers.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Meet Our Leadership</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1759257212156-9944a0e9d6d5?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Founder" class="w-full h-68 object-cover"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1 text-gray-800">Sathy Prabha</h3>
+                            <p class="text-red-500 mb-4">Founder</p>
+                            <p class="text-gray-600">With over 25 years of humanitarian experience, Sathy Prabha founded Bethesda after witnessing the struggles of communities during her Peace Corps service.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1759258619797-b4315e826b1c?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Program Director" class="w-full h-68 object-cover"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1  text-gray-800">Rakhi R Krishna</h3>
+                            <p class="text-red-500 mb-4">Program Director</p>
+                            <p class="text-gray-600">Rakhi oversees all program implementations, ensuring our initiatives create sustainable impact in the communities we serve.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+                       <img src="https://images.unsplash.com/photo-1759257837613-c82c5f064769?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Finance Director" class="w-full h-68 object-cover"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1 text-gray-800">Alex Paul</h3>
+                            <p class="text-red-500 mb-4">Finance Director</p>
+                            <p class="text-gray-600">Alex manages our financial operations with transparency and efficiency, ensuring donor funds are used effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pt-16">
+            <div class="contact-hero text-white py-20 md:py-32">
+                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Get In Touch</h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">We'd love to hear from you. Reach out for questions, partnerships, or volunteer opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i data-feather="mail" class="w-8 h-8 text-red-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Email Us</h3>
+                        <p class="text-gray-600 mb-4">Have questions? We're happy to help.</p>
+                        <a href="mailto:Bethesdahomeforaged16@gmail.com" class="text-red-500 font-medium hover:text-red-600 transition">Send an Email</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i data-feather="phone" class="w-8 h-8 text-red-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Call Us</h3>
+                        <p class="text-gray-600 mb-4">Talk to our team directly.</p>
+                        <a href="tel:+919148134887" class="text-red-500 font-medium hover:text-red-600 transition">+91 9148134887</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i data-feather="map-pin" class="w-8 h-8 text-red-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Visit Us</h3>
+                        <p class="text-gray-600 mb-4">Find us at our main office.</p>
+                        <a href="#location" class="text-red-500 font-medium hover:text-red-600 transition">See Location</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Send Us a Message</h2>
+                <div id="contact-form-container" class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required></textarea>
+                        </div>
+                        <div class="text-right">
+                            <button type="submit" id="contact-submit-button" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 disabled:bg-red-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
+                            <h3 class="text-lg font-bold">How can I donate?</h3>
+                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
+                            <div class="text-gray-600 pt-4">
+                                <p>You can donate via direct bank transfer or UPI. Please visit our <a href="#donate" class="text-red-500 hover:underline">Donate Section</a> for all the details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
+                            <h3 class="text-lg font-bold">How can I volunteer?</h3>
+                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
+                             <div class="text-gray-600 pt-4">
+                                <p>We are always looking for passionate individuals to join our cause. Please send us a message through the contact form above with your interest, and we'll get back to you with available opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
+                            <h3 class="text-lg font-bold">Is my donation tax-deductible?</h3>
+                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
+                             <div class="text-gray-600 pt-4">
+                                <p>Yes, Bethesda Home for aged Trust is a registered non-profit organization. All donations are tax-deductible under section 80G of the Income Tax Act. Please contact us with your donation details to receive your tax receipt.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
+                            <h3 class="text-lg font-bold">What percentage of my donation goes to the cause?</h3>
+                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
+                             <div class="text-gray-600 pt-4">
+                               <p>We are committed to transparency. Over 90% of all donations go directly to funding our programs and helping communities. The remaining amount covers essential administrative costs to keep our operations running smoothly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="pt-16">
+            <div class="location-hero text-white py-20 md:py-32">
+                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Locations</h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Find out where we're making an impact</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Headquarters</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 rounded-lg shadow-lg">
+                    <div data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1759259044895-74d5ee97359b?q=80&w=2250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Headquarters Building" class="rounded-lg shadow-md w-full" />
+                    </div>
+                    <div data-aos="fade-left">
+                        <h3 class="text-2xl font-bold mb-4">Bengaluru, India</h3>
+                        <p class="text-gray-600 mb-6">Our main office coordinates all operations and serves as the hub for our administrative, fundraising, and program development activities.</p>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start space-x-3">
+                                <i data-feather="map-pin" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                                <span>Jangalpalya, Bannerghatta Road, Bengaluru, Karnataka 560083</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-feather="phone" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                                <span>+91 9148134887</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-feather="mail" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                                <span>Bethesdahomeforaged16@gmail.com</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-feather="clock" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                                <span>Available 9am - 5pm</span>
+                            </li>
+                        </ul>
+                        <a href="https://maps.app.goo.gl/1SVL1V4kqqw7xxYj9" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md transition duration-300">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donate Section -->
+        <section id="donate" class="pt-16">
+             <div class="bank-hero text-white py-20 md:py-32">
+                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Donate</h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Support our cause through direct bank transfers or UPI payments</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md bank-card transition duration-300" data-aos="fade-right">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="dollar-sign" class="w-6 h-6 text-red-500"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">Bank Account Details</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Account Name</h3>
+                                <p class="text-lg font-semibold text-gray-800">Bethesda Foundation</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Account Number</h3>
+                                <p class="text-lg font-semibold text-gray-800">0000 0000 0000</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Bank Name</h3>
+                                <p class="text-lg font-semibold text-gray-800">State Bank of India</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">IFSC Code</h3>
+                                <p class="text-lg font-semibold text-gray-800">SBIN00XXXXX</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-500">Branch</h3>
+                                <p class="text-lg font-semibold text-gray-800">Bannerghatta Road, Bengaluru</p>
+                            </div>
+                            <button id="copy-all-button" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 w-full">
+                                Copy All Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md bank-card transition duration-300" data-aos="fade-left">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="smartphone" class="w-6 h-6 text-red-500"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">UPI Payment</h2>
+                        </div>
+                        <div class="text-center flex flex-col justify-between h-full">
+                            <div>
+                                <div class="mb-6">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=192x192&data=upi://pay?pa=bethesda.foundation@upi" alt="UPI QR Code" class="mx-auto rounded-md" />
+                                    <p class="mt-2 text-sm text-gray-500">Scan the QR code to make an instant payment</p>
+                                </div>
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-medium text-gray-500">UPI ID</h3>
+                                    <p class="text-lg font-semibold text-gray-800">bethesda.foundation@upi</p>
+                                    <button id="copy-upi-button" class="mt-2 text-red-500 hover:text-red-600 font-medium transition">
+                                        Copy UPI ID
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">More Ways to Give</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-100 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                        <i data-feather="gift" class="w-10 h-10 text-red-500 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">In-Kind Donations</h3>
+                        <p class="text-gray-600">Donate goods or services. Contact us for our current needs.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                        <i data-feather="clock" class="w-10 h-10 text-red-500 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Volunteer</h3>
+                        <p class="text-gray-600">Your time is a valuable gift. <a href="#contact" class="text-red-500 hover:underline">Get in touch</a>.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                        <i data-feather="share-2" class="w-10 h-10 text-red-500 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Spread the Word</h3>
+                        <p class="text-gray-600">Share our mission with your friends and family.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Bethesda</h3>
+                    <p class="text-gray-400">Committed to making the world a better place through faith and action.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="#location" class="text-gray-400 hover:text-white transition">Locations</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-white transition">Donate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start space-x-2">
+                            <i data-feather="mail" class="mt-1 flex-shrink-0"></i>
+                            <span>Bethesdahomeforaged16@gmail.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-feather="phone"></i>
+                            <span>+91 9148134887</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i data-feather="map-pin" class="mt-1 flex-shrink-0"></i>
+                            <span>Jangalpalya, Bannerghatta Road, Bengaluru, Karnataka 560083</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and stories of impact.</p>
+                    <div id="newsletter-container">
+                        <form id="newsletter-form" class="flex">
+                            <input type="email" id="newsletter-email" placeholder="Your email" class="px-4 py-2 bg-white rounded-l-md focus:outline-none text-gray-800 w-full" required />
+                            <button type="submit" id="newsletter-submit-button" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-r-md transition">
+                                <i data-feather="send"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+               <p>&copy; 2024 Bethesda Home for aged Trust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                once: true,
+                duration: 800
+            });
+
+            // Initialize Feather Icons
+            feather.replace();
+
+            // --- Mobile Menu ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
+            const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isMenuOpen = mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', isMenuOpen);
+                menuIcon.setAttribute('data-feather', isMenuOpen ? 'x' : 'menu');
+                feather.replace(); // Re-render icon
+            });
+            
+            // Close menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuIcon.setAttribute('data-feather', 'menu');
+                    feather.replace();
+                });
+            });
+
+            // --- Active Nav Link on Scroll ---
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const headerHeight = document.getElementById('header').offsetHeight;
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - headerHeight - 20; // 20px offset
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+
+            // --- FAQ Accordion ---
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-button');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+
+                button.addEventListener('click', () => {
+                    const isOpen = content.classList.toggle('max-h-0');
+                    if (isOpen) {
+                        content.classList.remove('max-h-0');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.style.maxHeight = '0px';
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            // --- Contact Form Submission ---
+            const contactForm = document.getElementById('contact-form');
+            const contactFormContainer = document.getElementById('contact-form-container');
+            const contactSubmitButton = document.getElementById('contact-submit-button');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                contactSubmitButton.disabled = true;
+                contactSubmitButton.textContent = 'Sending...';
+
+                setTimeout(() => {
+                    contactFormContainer.innerHTML = `
+                        <div class="text-center py-10">
+                            <i data-feather="check-circle" class="w-16 h-16 text-green-500 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-800">Message Sent!</h3>
+                            <p class="text-gray-600 mt-2">Thank you for reaching out. We will get back to you shortly.</p>
+                        </div>
+                    `;
+                    feather.replace();
+
+                    setTimeout(() => {
+                         contactFormContainer.innerHTML = '';
+                         contactFormContainer.appendChild(contactForm);
+                         contactForm.reset();
+                         contactSubmitButton.disabled = false;
+                         contactSubmitButton.textContent = 'Send Message';
+                    }, 4000);
+                }, 1500);
+            });
+
+            // --- Newsletter Form Submission ---
+            const newsletterForm = document.getElementById('newsletter-form');
+            const newsletterContainer = document.getElementById('newsletter-container');
+            const newsletterSubmitButton = document.getElementById('newsletter-submit-button');
+
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                newsletterSubmitButton.disabled = true;
+                newsletterSubmitButton.innerHTML = `<i data-feather="loader" class="animate-spin"></i>`;
+                feather.replace();
+
+                setTimeout(() => {
+                    newsletterContainer.innerHTML = `<p class="text-green-400">Thank you for subscribing!</p>`;
+                    
+                    setTimeout(() => {
+                        newsletterContainer.innerHTML = '';
+                        newsletterContainer.appendChild(newsletterForm);
+                        newsletterForm.reset();
+                        newsletterSubmitButton.disabled = false;
+                        newsletterSubmitButton.innerHTML = `<i data-feather="send"></i>`;
+                        feather.replace();
+                    }, 3000);
+                }, 1000);
+            });
+            
+            // --- Copy to Clipboard ---
+            const copyAllButton = document.getElementById('copy-all-button');
+            const copyUpiButton = document.getElementById('copy-upi-button');
+            
+            copyAllButton.addEventListener('click', () => {
+                const bankDetails = {
+                    name: "Bethesda Foundation",
+                    number: "0000 0000 0000",
+                    bank: "State Bank of India",
+                    ifsc: "SBIN00XXXXX",
+                    branch: "Bannerghatta Road, Bengaluru",
+                };
+                const detailsText = `Account Name: ${bankDetails.name}\nAccount Number: ${bankDetails.number}\nBank Name: ${bankDetails.bank}\nIFSC Code: ${bankDetails.ifsc}\nBranch: ${bankDetails.branch}`;
+                navigator.clipboard.writeText(detailsText).then(() => {
+                    copyAllButton.textContent = 'Copied!';
+                    setTimeout(() => { copyAllButton.textContent = 'Copy All Details'; }, 2000);
+                });
+            });
+
+            copyUpiButton.addEventListener('click', () => {
+                const upiId = 'bethesda.foundation@upi';
+                navigator.clipboard.writeText(upiId).then(() => {
+                    copyUpiButton.textContent = 'Copied!';
+                    setTimeout(() => { copyUpiButton.textContent = 'Copy UPI ID'; }, 2000);
+                });
+            });
+        });
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
