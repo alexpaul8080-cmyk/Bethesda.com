@@ -783,7 +783,7 @@
             });
 
             copyUpiButton.addEventListener('click', () => {
-                const upiId = 'bethesda.foundation@upi';
+               
                 navigator.clipboard.writeText(upiId).then(() => {
                     copyUpiButton.textContent = 'Copied!';
                     setTimeout(() => { copyUpiButton.textContent = 'Copy UPI ID'; }, 2000);
