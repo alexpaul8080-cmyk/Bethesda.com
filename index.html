@@ -1,796 +1,2202 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bethesda Foundation</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Join Bethesda Foundation in our mission to bring hope and help to those in need through community support and charitable initiatives.">
-    <meta name="keywords" content="charity, foundation, non-profit, community support, Bethesda, donation, volunteer">
-    <meta name="author" content="Bethesda Foundation">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.facebook.com/people/Bethesda-Home-for-Aged-Trust/100067110367164/"> <!-- Replace with actual URL -->
-    <meta property="og:title" content="Bethesda Foundation - Making a Difference">
-    <meta property="og:description" content="Join Bethesda Foundation in our mission to bring hope and help to those in need through community support and charitable initiatives.">
-    <meta property="og:image" content=""> <!-- Replace with a static image URL -->
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bethesda-foundation.org/"> <!-- Replace with actual URL -->
-    <meta property="twitter:title" content="Bethesda Foundation - Making a Difference">
-    <meta property="twitter:description" content="Join Bethesda Foundation in our mission to bring hope and help to those in need through community support and charitable initiatives.">
-    <meta property="twitter:image" content="https://plus.unsplash.com/premium_photo-1723867352391-da3422ddc795?q=80&w=2138&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> <!-- Replace with a static image URL -->
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1756198193944-7401d3593ed9?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
-            background-position: center;
-        }
-        .about-hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1508169351866-777fc0047ac5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
-            background-position: center;
-        }
-        .contact-hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-        }
-        .bank-hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-        }
-        .location-hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1619468129361-605ebea04b44?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
-            background-position: center;
-        }
-        .donation-card:hover, .bank-card:hover, .contact-card:hover, .location-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .nav-link.active {
-          color: #ef4444; /* red-500 */
-          font-weight: 500;
-        }
-    </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.3"
-  }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bethesda — A Home of Care & Compassion</title>
+<meta name="description" content="For over 9 years, Bethesda has been a sanctuary for over 300 people, giving all the care, love and dignity they deserve."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- SF Pro removed, using Figtree only -->
+<!-- SF Pro Display not on Google — use closest equivalent -->
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   BETHESDA — Apple-inspired Minimal
+   Pure whites · near-black type · single accent
+   Figtree (geometric clean) + Newsreader (italic serif accents)
+   ══════════════════════════════════════ */
+:root{
+  --white:  #ffffff;
+  --off:    #fbfbfd;
+  --gray-1: #f5f5f7;
+  --gray-2: #e8e8ed;
+  --gray-3: #d2d2d7;
+  --gray-4: #86868b;
+  --gray-5: #6e6e73;
+  --black:  #1d1d1f;
+  --black-2:#0a0a0a;
+  --accent: #0071e3;  /* single accent — Apple blue */
+  --accent-h:#0077ed;
+  --sans:   'Figtree', -apple-system, BlinkMacSystemFont, sans-serif;
+  --serif:  'Figtree', -apple-system, sans-serif; /* unified — same as sans */
+  --ease:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-<body class="font-sans bg-white">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--white);
+  color:var(--black);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
 
-    <!-- Header -->
-<header id="header" class="bg-white shadow-lg sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center py-4">
-      <a href="#home" class="flex items-center space-x-2">
-        <!-- Your Logo -->
-        <img src="https://github.com/alexpaul8080-cmyk/Bethesda.com/blob/main/New%20Logo.jpg?raw=true" alt= "Bethesda Logo" class="h-10 w-auto" />
-        <span class="text-xl font-bold text-gray-800">Bethesda Home For Aged Trust</span>
-      </a>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#home" class="nav-link transition text-gray-600 hover:text-red-500">Home</a>
-        <a href="#about" class="nav-link transition text-gray-600 hover:text-red-500">About</a>
-        <a href="#contact" class="nav-link transition text-gray-600 hover:text-red-500">Contact</a>
-        <a href="#location" class="nav-link transition text-gray-600 hover:text-red-500">Location</a>
-        <a href="#donate" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">Donate</a>
-      </div>
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-        <i data-feather="menu"></i>
-      </button>
+/* ══ NAV ══ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:52px;
+  background:#ffffff;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 44px;
+  box-shadow:0 1px 0 rgba(0,0,0,0.06);
+}
+.nav-logo{
+  font-size:17px;font-weight:300;color:var(--black);
+  text-decoration:none;letter-spacing:-0.02em;
+  display:flex;align-items:center;gap:10px;
+}
+.nav-logo img{width:28px;height:28px;border-radius:50%;object-fit:cover;}
+.nav-links{
+  display:flex;gap:4px;list-style:none;
+  position:absolute;left:50%;transform:translateX(-50%);
+}
+.nav-links a{
+  font-size:12px;font-weight:400;color:var(--black);
+  text-decoration:none;letter-spacing:0;
+  padding:6px 14px;border-radius:980px;
+  position:relative;
+  transition:color 0.25s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.nav-links a::before{
+  content:'';
+  position:absolute;inset:0;border-radius:980px;
+  background:var(--accent);
+  transform:scale(0.6);opacity:0;
+  transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+             opacity 0.25s ease;
+  z-index:-1;
+}
+.nav-links a:hover{color:#fff;}
+.nav-links a:hover::before{transform:scale(1);opacity:1;}
+.nav-cta{
+  font-size:13px;font-weight:600;color:#ffffff;
+  background:#e8003d;
+  text-decoration:none;
+  padding:8px 20px;
+  border-radius:980px;
+  transition:background 0.2s,transform 0.2s,box-shadow 0.2s;
+  white-space:nowrap;
+  box-shadow:0 3px 12px rgba(232,0,61,0.35);
+}
+.nav-cta:hover{background:#c8002e;transform:scale(1.04);box-shadow:0 6px 18px rgba(232,0,61,0.45);}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-hamburger span{display:block;width:18px;height:1.5px;background:var(--black);margin:4px 0;transition:all 0.3s;}
+.mobile-nav{
+  display:none;position:fixed;inset:0;z-index:199;
+  background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);
+  flex-direction:column;align-items:center;justify-content:center;gap:40px;
+}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-size:28px;font-weight:200;color:var(--black);text-decoration:none;letter-spacing:-0.02em;}
+
+/* ══ HERO ══ */
+.hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  text-align:center;
+  padding:0 0 80px;
+  position:relative;overflow:hidden;
+  background:var(--black-2);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 60%),
+    var(--black-2);
+}
+.hero-img{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1576765608866-5b51046452be?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+  opacity:0.35;
+  mix-blend-mode:luminosity;
+}
+.hero-content{
+  position:relative;z-index:2;
+  max-width:760px;padding:0 24px;
+}
+.hero-eyebrow{
+  font-size:13px;font-weight:300;
+  color:rgba(255,255,255,0.55);
+  letter-spacing:0.06em;
+  margin-bottom:20px;
+  display:block;
+  animation:fadeUp 1s var(--ease) both;
+}
+.hero-h1{
+  font-size:clamp(36px,5vw,68px);
+  font-weight:700;
+  line-height:1.08;
+  letter-spacing:-0.025em;
+  color:#fff;
+  margin-bottom:24px;
+  animation:fadeUp 1s 0.1s var(--ease) both;
+}
+.hero-sub{
+  font-size:20px;font-weight:300;line-height:1.65;
+  color:rgba(255,255,255,0.6);
+  max-width:560px;margin:0 auto 44px;
+  animation:fadeUp 1s 0.2s var(--ease) both;
+}
+.hero-actions{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  animation:fadeUp 1s 0.3s var(--ease) both;
+}
+.btn-blue{
+  background:var(--accent);color:#fff;
+  font-size:14px;font-weight:400;
+  padding:12px 28px;border-radius:980px;
+  text-decoration:none;
+  transition:all 0.3s var(--ease);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-blue:hover{background:var(--accent-h);transform:scale(1.02);}
+.btn-white-ghost{
+  background:rgba(255,255,255,0.1);color:#fff;
+  font-size:14px;font-weight:400;
+  padding:12px 28px;border-radius:980px;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.25);
+  transition:all 0.3s var(--ease);
+}
+.btn-white-ghost:hover{background:rgba(255,255,255,0.18);}
+/* scroll indicator removed */
+
+/* ══ STATS BAND ══ */
+.stats-band{
+  background:var(--gray-1);
+  border-bottom:1px solid var(--gray-2);
+  padding:60px 44px;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  text-align:center;
+}
+.stat-item{padding:0 40px;}
+.stat-item + .stat-item{border-left:1px solid var(--gray-2);}
+.stat-num{
+  font-size:clamp(40px,6vw,72px);font-weight:800;
+  color:var(--black);letter-spacing:-0.03em;
+  line-height:1;margin-bottom:6px;
+}
+.stat-num sup{font-size:0.45em;vertical-align:super;}
+.stat-label{font-size:13px;font-weight:300;color:var(--gray-5);}
+
+/* ══ SECTION BASE ══ */
+.section{padding:120px 44px;}
+.section-center{text-align:center;max-width:680px;margin:0 auto;}
+.eyebrow{
+  font-size:12px;font-weight:400;letter-spacing:0.06em;
+  text-transform:uppercase;color:var(--accent);
+  margin-bottom:16px;display:block;
+}
+.h2{
+  font-size:clamp(28px,4.5vw,52px);font-weight:700;
+  letter-spacing:-0.025em;line-height:1.08;
+  color:var(--black);margin-bottom:18px;
+}
+.h2 em{font-style:normal;font-weight:800;}
+.section-body{
+  font-size:17px;font-weight:300;line-height:1.7;
+  color:var(--gray-5);max-width:600px;
+}
+
+/* ══ MISSION ══ */
+.mission{background:var(--white);}
+.mission-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;margin-top:80px;
+}
+.mission-cell{
+  background:var(--gray-1);padding:56px 52px;
+  position:relative;overflow:hidden;
+}
+.mission-cell:nth-child(2){background:var(--black);}
+.mission-cell:nth-child(3){background:var(--accent);}
+.mission-cell:nth-child(4){background:var(--gray-1);}
+.cell-num{
+  font-size:80px;font-weight:800;letter-spacing:-0.04em;
+  color:rgba(0,0,0,0.06);line-height:1;
+  position:absolute;top:24px;right:32px;
+  pointer-events:none;
+}
+.mission-cell:nth-child(2) .cell-num,
+.mission-cell:nth-child(3) .cell-num{color:rgba(255,255,255,0.1);}
+.cell-title{
+  font-size:22px;font-weight:300;letter-spacing:-0.015em;
+  color:var(--black);margin-bottom:10px;
+}
+.mission-cell:nth-child(2) .cell-title,
+.mission-cell:nth-child(3) .cell-title{color:#fff;}
+.cell-body{font-size:14px;font-weight:300;line-height:1.7;color:var(--gray-5);max-width:320px;}
+.mission-cell:nth-child(2) .cell-body{color:rgba(255,255,255,0.55);}
+.mission-cell:nth-child(3) .cell-body{color:rgba(255,255,255,0.75);}
+
+/* ══ STORY ══ */
+.story{background:var(--off);}
+.story-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;
+  min-height:600px;
+}
+.story-img{position:relative;overflow:hidden;min-height:600px;}
+.story-img img{
+  width:100%;height:100%;object-fit:cover;
+  border-radius:0;
+  filter:grayscale(8%) contrast(1.04);
+  position:absolute;inset:0;
+}
+.story-badge{
+  position:absolute;bottom:-20px;right:-20px;
+  width:120px;height:120px;border-radius:50%;
+  background:var(--black);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+}
+.story-badge-num{font-size:28px;font-weight:200;color:#fff;letter-spacing:-0.02em;line-height:1;}
+.story-badge-label{font-size:9px;color:rgba(255,255,255,0.5);letter-spacing:0.1em;text-transform:uppercase;margin-top:3px;}
+.story-text{padding:80px 72px;display:flex;flex-direction:column;justify-content:center;}
+.story-text .h2{margin-bottom:28px;}
+.story-text p{
+  font-size:16px;font-weight:300;line-height:1.8;
+  color:var(--gray-5);margin-bottom:20px;
+}
+.story-text p:first-of-type{
+  font-size:20px;font-weight:300;color:var(--black);
+  font-style:normal;font-weight:800;line-height:1.6;
+}
+.read-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:14px;color:var(--accent);text-decoration:none;
+  margin-top:8px;transition:gap 0.2s;
+}
+.read-link:hover{gap:10px;}
+
+/* ══ TIMELINE ══ */
+.timeline-section{background:var(--white);}
+.timeline-inner{max-width:800px;margin:80px auto 0;}
+.tl-item{
+  display:grid;grid-template-columns:80px 1px 1fr;gap:0 32px;
+  margin-bottom:0;position:relative;
+}
+.tl-item:last-child .tl-line{background:transparent;}
+.tl-year{
+  font-size:13px;font-weight:400;color:var(--gray-4);
+  text-align:right;padding-top:2px;letter-spacing:0.02em;
+}
+.tl-line{
+  width:1px;background:var(--gray-2);
+  position:relative;
+}
+.tl-dot{
+  position:absolute;top:5px;left:50%;transform:translateX(-50%);
+  width:10px;height:10px;border-radius:50%;
+  background:var(--white);border:1.5px solid var(--gray-3);
+  transition:border-color 0.3s;
+}
+.tl-item:hover .tl-dot{border-color:var(--accent);}
+.tl-content{padding:0 0 52px;}
+.tl-title{
+  font-size:16px;font-weight:700;color:var(--black);
+  margin-bottom:6px;letter-spacing:-0.01em;
+}
+.tl-text{font-size:14px;font-weight:300;color:var(--gray-5);line-height:1.7;}
+
+/* ══ VALUES ══ */
+.values{background:var(--gray-1);}
+.values-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  margin-top:80px;background:var(--gray-2);
+}
+.value-cell{
+  background:var(--gray-1);padding:56px 44px;
+  transition:background 0.3s;
+}
+.value-cell:hover{background:var(--white);}
+.value-icon{display:none;}
+.value-title{font-size:26px;font-weight:800;color:var(--black);margin-bottom:10px;letter-spacing:-0.025em;line-height:1.1;}
+.value-body{font-size:15px;font-weight:300;color:var(--gray-5);line-height:1.75;margin-top:6px;}
+
+/* ══ TEAM ══ */
+.team{background:var(--white);}
+.team-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:32px;
+  max-width:1000px;margin:80px auto 0;
+}
+.team-card{text-align:center;}
+.team-photo{
+  width:140px;height:140px;border-radius:50%;
+  object-fit:cover;margin:0 auto 20px;display:block;
+  filter:grayscale(20%);
+  border:1px solid var(--gray-2);
+}
+.team-name{font-size:17px;font-weight:700;color:var(--black);letter-spacing:-0.01em;margin-bottom:3px;}
+.team-role{font-size:12px;font-weight:400;color:var(--accent);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:10px;}
+.team-bio{font-size:13px;font-weight:300;color:var(--gray-5);line-height:1.7;}
+
+/* ══ DONATE ══ */
+.donate{background:var(--black);padding:120px 44px;}
+.donate-inner{max-width:960px;margin:0 auto;text-align:center;}
+.donate .eyebrow{color:rgba(255,255,255,0.4);}
+.donate .h2{color:#fff;}
+.donate-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  margin-top:60px;text-align:left;
+}
+.donate-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;padding:36px;
+  transition:background 0.3s;
+}
+.donate-card:hover{background:rgba(255,255,255,0.08);}
+.dc-title{
+  font-size:19px;font-weight:300;color:#fff;
+  letter-spacing:-0.01em;margin-bottom:28px;
+}
+.bank-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.bank-row:last-of-type{border:none;}
+.bl{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.05em;text-transform:uppercase;}
+.bv{font-size:14px;font-weight:400;color:rgba(255,255,255,0.85);}
+.copy-all{
+  display:block;width:100%;margin-top:24px;
+  background:rgba(255,255,255,0.1);color:#fff;
+  font-size:13px;font-weight:400;letter-spacing:0;
+  padding:13px;border-radius:10px;border:none;cursor:pointer;
+  transition:background 0.2s;
+}
+.copy-all:hover{background:rgba(255,255,255,0.16);}
+.upi-wrap{text-align:center;padding-top:12px;}
+.upi-wrap img{width:160px;height:160px;object-fit:contain;margin:0 auto 16px;display:block;border-radius:12px;background:#fff;padding:8px;}
+.upi-note{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px;}
+
+/* ══ CONTACT ══ */
+.contact{background:var(--off);padding:120px 44px;}
+.contact-inner{max-width:960px;margin:0 auto;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:60px;align-items:start;}
+.contact-methods{display:flex;flex-direction:column;gap:0;}
+.cm{
+  display:flex;align-items:center;gap:20px;
+  padding:20px 0;border-bottom:1px solid var(--gray-2);
+}
+.cm:first-child{border-top:1px solid var(--gray-2);}
+.cm-icon{width:20px;height:20px;color:var(--gray-4);flex-shrink:0;}
+.cm-label{font-size:11px;color:var(--gray-4);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;}
+.cm-val{font-size:14px;color:var(--black);text-decoration:none;transition:color 0.2s;}
+.cm-val:hover{color:var(--accent);}
+.form{display:flex;flex-direction:column;gap:0;}
+.fg{border-bottom:1px solid var(--gray-2);padding:16px 0;}
+.fg:first-child{border-top:1px solid var(--gray-2);}
+.fg label{display:block;font-size:11px;color:var(--gray-4);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;}
+.fg input,.fg textarea{
+  width:100%;background:transparent;border:none;outline:none;
+  font-family:var(--sans);font-size:15px;font-weight:300;
+  color:var(--black);resize:none;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--gray-3);}
+.fg textarea{min-height:80px;}
+.submit-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--black);color:#fff;
+  font-size:13px;font-weight:400;
+  padding:13px 28px;border-radius:980px;border:none;cursor:pointer;
+  margin-top:24px;align-self:flex-start;
+  transition:all 0.3s;
+}
+.submit-btn:hover{background:var(--accent);}
+
+/* ══ FAQ ══ */
+.faq{background:var(--white);padding:120px 44px;}
+.faq-inner{max-width:680px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--gray-2);}
+.faq-q{
+  width:100%;display:flex;justify-content:space-between;align-items:center;
+  padding:22px 0;background:none;border:none;cursor:pointer;
+  font-family:var(--sans);font-size:15px;font-weight:400;color:var(--black);
+  text-align:left;letter-spacing:-0.01em;
+}
+.faq-q::after{
+  content:'+';font-size:20px;font-weight:200;color:var(--gray-4);
+  transition:transform 0.3s var(--ease);flex-shrink:0;margin-left:16px;
+}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{
+  display:grid;grid-template-rows:0fr;
+  transition:grid-template-rows 0.35s var(--ease);
+}
+.faq-item.open .faq-a{grid-template-rows:1fr;}
+.faq-a-inner{overflow:hidden;}
+.faq-a-inner p{
+  font-size:14px;font-weight:300;color:var(--gray-5);
+  line-height:1.7;padding-bottom:22px;
+}
+
+/* ══ LOCATION ══ */
+.location{background:var(--gray-1);padding:40px 44px;}
+.loc-inner{max-width:1440px;margin:0 auto;}
+.loc-grid{display:grid;grid-template-columns:1fr 2.1fr;gap:56px;margin-top:24px;align-items:start;}
+.loc-details{display:flex;flex-direction:column;gap:28px;}
+.ld{display:flex;gap:16px;align-items:flex-start;}
+.ld-icon{width:20px;height:20px;color:var(--gray-4);flex-shrink:0;margin-top:2px;}
+.ld-label{font-size:11px;color:var(--gray-4);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:3px;}
+.ld-val{font-size:14px;font-weight:300;color:var(--black);line-height:1.5;}
+.ld-val a{color:var(--accent);text-decoration:none;}
+.map-wrap{
+  position:relative;
+  border-radius:24px;overflow:hidden;
+  box-shadow:0 24px 64px rgba(0,0,0,0.14);
+  width:100%;
+}
+.map-embed{
+  width:100%;height:570px;
+  background:var(--gray-2);
+  position:relative;
+}
+.map-embed iframe{
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;border:none;display:block;
+}
+.map-overlay-card{
+  position:absolute;bottom:24px;left:24px;z-index:10;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-radius:14px;
+  padding:16px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.15);
+  max-width:260px;
+}
+.map-overlay-title{font-size:14px;font-weight:700;color:var(--black);margin-bottom:4px;}
+.map-overlay-addr{font-size:12px;color:var(--gray-5);line-height:1.5;}
+.map-overlay-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:14px;font-size:13px;font-weight:600;color:#fff;
+  background:var(--black);padding:10px 20px;border-radius:980px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:background 0.3s ease,transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.map-overlay-badge:hover{
+  background:var(--accent);
+  transform:translateY(-1px);
+}
+
+/* ══ FOOTER ══ */
+.footer{background:var(--black);padding:64px 44px 40px;}
+.footer-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:48px;padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.ft-brand{font-size:13px;color:rgba(255,255,255,0.8);font-weight:400;margin-bottom:10px;}
+.ft-tagline{font-size:12px;color:rgba(255,255,255,0.3);line-height:1.8;margin-bottom:20px;}
+.ft-social{display:flex;gap:12px;}
+.ft-social a{
+  font-size:12px;color:rgba(255,255,255,0.35);
+  text-decoration:none;transition:color 0.2s;
+}
+.ft-social a:hover{color:rgba(255,255,255,0.8);}
+.ft-heading{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.ft-links a{font-size:12px;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s;}
+.ft-links a:hover{color:rgba(255,255,255,0.8);}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:28px;
+}
+.ft-copy,.ft-right{font-size:11px;color:rgba(255,255,255,0.2);}
+
+/* ══ ANIMATIONS ══ */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.reveal{
+  opacity:0;transform:translateY(24px);
+  transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);
+}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-scale{
+  opacity:0;transform:scale(0.97);
+  transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);
+}
+.reveal-scale.in{opacity:1;transform:scale(1);}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1024px){
+  .nav{padding:0 24px;}
+  .section{padding:80px 24px;}
+  .stats-band{padding:48px 24px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
+  .donate{padding:80px 24px;}
+  .contact{padding:80px 24px;}
+  .faq{padding:80px 24px;}
+  .location{padding:80px 24px;}
+  .footer{padding:48px 24px 32px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-cta{display:none;}
+  .nav-hamburger{display:block;}
+  .stats-band{grid-template-columns:1fr;gap:0;}
+  .stat-item + .stat-item{border-left:none;border-top:1px solid var(--gray-2);}
+  .mission-grid{grid-template-columns:1fr;}
+  .story-inner{grid-template-columns:1fr;min-height:auto;}
+  .story-img{min-height:320px;}
+  .story-text{padding:48px 32px;}
+  .values-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr 1fr;gap:24px;}
+  .donate-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .loc-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;}
+}
+@media(max-width:480px){
+  .team-grid{grid-template-columns:1fr;}
+  .hero-h1{font-size:38px;}
+}
+
+/* ══ TIMELINE — cinematic dark ══ */
+.timeline-section{
+  background:var(--black-2);
+  padding:140px 44px 160px;
+  position:relative;overflow:hidden;
+}
+.timeline-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(0,113,227,0.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.timeline-section .section-center .eyebrow{color:rgba(255,255,255,0.4);}
+.timeline-section .h2{color:#fff;}
+.timeline-inner{max-width:960px;margin:80px auto 0;position:relative;}
+.tl-spine{position:absolute;left:108px;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.06);}
+.tl-spine-fill{position:absolute;left:0;top:0;width:100%;background:linear-gradient(180deg,var(--accent),rgba(0,113,227,0.2));height:0%;transition:height 0.3s ease;}
+.tl-item{
+  display:grid;grid-template-columns:96px 48px 1fr;
+  gap:0;margin-bottom:0;position:relative;
+  opacity:0;transform:translateX(-28px);
+  transition:opacity 0.65s cubic-bezier(0.25,0.46,0.45,0.94),transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.tl-item.tl-visible{opacity:1;transform:translateX(0);}
+.tl-year{
+  font-size:14px;font-weight:700;
+  color:rgba(255,255,255,0.35);
+  text-align:right;padding-top:4px;letter-spacing:0.08em;
+  transition:color 0.4s;
+}
+.tl-item.tl-visible .tl-year{color:var(--accent);}
+.tl-node{display:flex;flex-direction:column;align-items:center;padding:0 14px;}
+.tl-dot{
+  width:16px;height:16px;border-radius:50%;
+  border:2px solid rgba(255,255,255,0.12);
+  background:var(--black-2);
+  flex-shrink:0;margin-top:2px;
+  transition:border-color 0.4s,background 0.4s,box-shadow 0.4s;
+  position:relative;z-index:1;
+}
+.tl-item.tl-visible .tl-dot{
+  border-color:var(--accent);
+  background:var(--accent);
+  box-shadow:0 0 0 5px rgba(0,113,227,0.15),0 0 20px rgba(0,113,227,0.35);
+}
+.tl-line-seg{flex:1;width:1px;background:rgba(255,255,255,0.06);margin:4px 0;}
+.tl-content{padding:0 0 72px;}
+.tl-chip{
+  display:inline-block;
+  font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);background:rgba(0,113,227,0.1);
+  border:1px solid rgba(0,113,227,0.22);
+  padding:3px 11px;border-radius:999px;margin-bottom:10px;
+  opacity:0;transform:translateY(10px);
+  transition:opacity 0.45s 0.08s,transform 0.45s 0.08s;
+}
+.tl-item.tl-visible .tl-chip{opacity:1;transform:translateY(0);}
+.tl-title{
+  font-size:26px;font-weight:800;color:#ffffff;
+  margin-bottom:8px;letter-spacing:-0.02em;
+  opacity:0;transform:translateY(10px);
+  transition:opacity 0.5s 0.15s,transform 0.5s 0.15s;
+}
+.tl-item.tl-visible .tl-title{opacity:1;transform:translateY(0);}
+.tl-text{
+  font-size:16px;font-weight:400;color:rgba(255,255,255,0.78);
+  line-height:1.8;max-width:480px;
+  opacity:0;transform:translateY(10px);
+  transition:opacity 0.5s 0.22s,transform 0.5s 0.22s;
+}
+.tl-item.tl-visible .tl-text{opacity:1;transform:translateY(0);}
+
+
+/* ══ GLOBAL SMOOTH SCROLL & SCROLLBAR ══ */
+html{
+  scroll-behavior:smooth;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{
+  background:rgba(0,113,227,0.25);
+  border-radius:99px;
+  transition:background 0.3s;
+}
+::-webkit-scrollbar-thumb:hover{background:rgba(0,113,227,0.5);}
+
+/* Progress bar at top of page */
+#scroll-progress{
+  position:fixed;top:0;left:0;z-index:500;
+  height:2.5px;width:0%;
+  background:linear-gradient(90deg,var(--accent),rgba(0,113,227,0.4));
+  transition:width 0.1s linear;
+  pointer-events:none;
+}
+
+/* Floating scroll-to-top button */
+#scroll-top{
+  position:fixed;bottom:32px;right:32px;z-index:300;
+  width:44px;height:44px;border-radius:50%;
+  background:#fff;border:1px solid rgba(0,0,0,0.1);
+  box-shadow:0 4px 16px rgba(0,0,0,0.1);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  opacity:0;pointer-events:none;
+  transform:translateY(16px);
+  transition:opacity 0.3s,transform 0.3s;
+  font-size:16px;color:var(--black);
+}
+#scroll-top.visible{opacity:1;pointer-events:all;transform:translateY(0);}
+#scroll-top:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+
+/* Section transitions — stagger reveal */
+.section-reveal{
+  opacity:0;transform:translateY(40px);
+  transition:opacity 0.8s cubic-bezier(0.25,0.46,0.45,0.94),
+             transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.section-reveal.sr-in{opacity:1;transform:translateY(0);}
+
+
+/* ══ GALLERY SLIDESHOW ══ */
+.gallery{
+  background:var(--black-2);
+  padding:120px 0 0;
+  overflow:hidden;
+  position:relative;
+}
+.gallery .section-center{padding:0 44px;margin-bottom:60px;}
+.gallery .section-center .eyebrow{color:rgba(255,255,255,0.4);}
+.gallery .section-center .h2{color:#fff;}
+
+/* Main stage */
+.gs-stage{
+  position:relative;
+  width:100%;
+  height:70vh;min-height:480px;max-height:720px;
+  overflow:hidden;
+  cursor:pointer;
+}
+.gs-slide{
+  position:absolute;inset:0;
+  opacity:0;
+  transform:scale(1.04);
+  transition:opacity 0.9s cubic-bezier(0.25,0.46,0.45,0.94),
+             transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94);
+  pointer-events:none;
+}
+.gs-slide.gs-active{
+  opacity:1;transform:scale(1);pointer-events:all;
+}
+.gs-slide.gs-prev{
+  opacity:0;transform:scale(0.96);
+}
+.gs-slide img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+}
+.gs-slide-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,0.65) 100%);
+}
+.gs-slide-caption{
+  position:absolute;bottom:48px;left:60px;right:60px;
+  color:#fff;
+}
+.gs-cap-num{
+  font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(255,255,255,0.45);margin-bottom:8px;
+}
+.gs-cap-text{
+  font-size:22px;font-weight:700;letter-spacing:-0.015em;
+  color:#fff;max-width:540px;line-height:1.3;
+}
+
+/* Controls */
+.gs-controls{
+  position:absolute;bottom:48px;right:60px;
+  display:flex;gap:10px;z-index:10;
+}
+.gs-btn{
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  color:#fff;font-size:16px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:all 0.25s;backdrop-filter:blur(8px);
+}
+.gs-btn:hover{background:rgba(255,255,255,0.25);}
+
+/* Progress dots */
+.gs-dots{
+  display:flex;justify-content:center;gap:8px;
+  padding:32px 0 60px;
+}
+.gs-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  cursor:pointer;
+  transition:background 0.3s,transform 0.3s;
+}
+.gs-dot.active{background:#fff;transform:scale(1.4);}
+
+/* Thumbnails strip */
+.gs-thumbs{
+  display:flex;gap:8px;padding:0 44px 80px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.gs-thumbs::-webkit-scrollbar{display:none;}
+.gs-thumb{
+  flex-shrink:0;width:100px;height:68px;
+  border-radius:8px;overflow:hidden;cursor:pointer;
+  opacity:0.4;
+  border:2px solid transparent;
+  transition:opacity 0.3s,border-color 0.3s,transform 0.3s;
+}
+.gs-thumb img{width:100%;height:100%;object-fit:cover;}
+.gs-thumb.active{opacity:1;border-color:#fff;transform:scale(1.05);}
+.gs-thumb:hover{opacity:0.75;}
+
+/* progress bar removed */
+
+
+/* ── Per-row copy button ── */
+.bank-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);
+  gap:12px;
+}
+.bank-row:last-of-type{border:none;}
+.bank-row-left{display:flex;flex-direction:column;gap:2px;flex:1;}
+.copy-row-btn{
+  background:none;border:none;cursor:pointer;
+  color:rgba(255,255,255,0.25);padding:5px;border-radius:6px;
+  flex-shrink:0;transition:color 0.2s,background 0.2s;
+  display:flex;align-items:center;justify-content:center;
+}
+.copy-row-btn:hover{color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.06);}
+.copy-row-btn.copied{color:#50e3c2;}
+
+
+.gs-pause{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  z-index:10;
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(0,0,0,0.38);
+  border:2px solid rgba(255,255,255,0.35);
+  color:#fff;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 0.3s,background 0.25s,transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  opacity:0;  /* hidden by default — only visible on hover or paused */
+}
+/* Show on stage hover */
+.gs-stage:hover .gs-pause{opacity:1;}
+/* Always visible when paused */
+.gs-pause.paused{opacity:1;}
+.gs-pause:hover{background:rgba(0,0,0,0.6);transform:translate(-50%,-50%) scale(1.08);}
+
+
+/* ══ ADMIN PANEL ══ */
+#admin-overlay{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;
+  animation:fadeIn 0.2s ease both;
+}
+#admin-overlay.open{display:flex;}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+#admin-modal{
+  background:#fff;border-radius:20px;
+  width:540px;max-width:95vw;max-height:90vh;
+  overflow-y:auto;
+  box-shadow:0 32px 80px rgba(0,0,0,0.25);
+  transform:scale(0.95) translateY(16px);
+  animation:popIn 0.3s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes popIn{from{transform:scale(0.93) translateY(20px);opacity:0;}to{transform:scale(1) translateY(0);opacity:1;}}
+#admin-login-pane,#admin-dash-pane{padding:40px;}
+.admin-login-logo-col{display:none;}
+.admin-login-form-col{display:contents;}
+.admin-team-row{display:flex;gap:14px;align-items:flex-start;padding:14px;background:var(--gray-1);border-radius:12px;}
+.admin-team-thumb{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--gray-2);flex-shrink:0;}
+.admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
+.admin-title{font-size:22px;font-weight:800;color:var(--black);letter-spacing:-0.02em;}
+.admin-close{background:var(--gray-1);border:none;cursor:pointer;width:32px;height:32px;border-radius:50%;font-size:14px;color:var(--gray-5);display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+.admin-close:hover{background:var(--gray-2);}
+.admin-badge{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);background:rgba(0,113,227,0.08);padding:3px 10px;border-radius:999px;margin-bottom:16px;display:inline-block;}
+.admin-fg{margin-bottom:18px;}
+.admin-fg label{display:block;font-size:11px;font-weight:600;color:var(--gray-5);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;}
+.admin-fg input{width:100%;padding:10px 14px;border:1.5px solid var(--gray-2);border-radius:10px;font-family:var(--sans);font-size:14px;outline:none;transition:border-color 0.2s;}
+.admin-fg input:focus{border-color:var(--accent);}
+.admin-btn{width:100%;padding:13px;border-radius:10px;border:none;background:var(--black);color:#fff;font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;transition:background 0.2s;}
+.admin-btn:hover{background:var(--accent);}
+.admin-err{color:#e8003d;font-size:13px;margin-top:8px;display:none;}
+/* Dashboard */
+.admin-section{margin-bottom:32px;}
+.admin-section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-5);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--gray-2);}
+.admin-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;}
+.admin-thumb{
+  aspect-ratio:4/3;border-radius:8px;overflow:hidden;
+  border:2px solid var(--gray-2);cursor:pointer;
+  position:relative;transition:border-color 0.2s;
+}
+.admin-thumb:hover{border-color:var(--accent);}
+.admin-thumb img{width:100%;height:100%;object-fit:cover;}
+.admin-thumb-num{
+  position:absolute;bottom:4px;left:6px;
+  font-size:10px;font-weight:700;color:#fff;
+  background:rgba(0,0,0,0.5);padding:1px 6px;border-radius:4px;
+}
+.admin-add-row{display:flex;gap:8px;margin-top:8px;}
+.admin-add-row input{flex:1;padding:9px 12px;border:1.5px solid var(--gray-2);border-radius:8px;font-family:var(--sans);font-size:13px;outline:none;}
+.admin-add-row input:focus{border-color:var(--accent);}
+.admin-add-row button{padding:9px 16px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-family:var(--sans);font-size:13px;font-weight:600;cursor:pointer;}
+.admin-logo-preview{width:80px;height:80px;border-radius:50%;object-fit:cover;border:2px solid var(--gray-2);margin-bottom:12px;display:block;}
+.admin-info{font-size:12px;color:var(--gray-4);line-height:1.7;background:var(--gray-1);padding:12px 14px;border-radius:8px;margin-top:12px;}
+.admin-logout{font-size:12px;color:var(--gray-4);cursor:pointer;text-decoration:underline;margin-top:20px;display:inline-block;}
+
+</style>
+</head>
+<body>
+<div id="scroll-progress"></div>
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#hero">
+    <img src="https://github.com/alexpaul8080-cmyk/Bethesda.com/blob/main/New%20Logo.jpg?raw=true" alt="Logo" onerror="this.style.display='none'">
+    Bethesda
+  </a>
+  <ul class="nav-links">
+    <li><a href="#story">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#location">Location</a></li>
+  </ul>
+  <a class="nav-cta" href="#donate">Donate</a>
+  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#story" onclick="closeMobileNav()">About</a>
+  <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="#location" onclick="closeMobileNav()">Location</a>
+  <a href="#donate" onclick="closeMobileNav()">Donate</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Est. 2016 · Bengaluru, Karnataka</span>
+    <h1 class="hero-h1">A Home of<br><strong style="font-weight:700;color:rgba(255,255,255,0.88)">Care & Compassion</strong></h1>
+    <p class="hero-sub">For over 9 years, Bethesda has been a sanctuary for the elderly, children and adults with mental challenges — giving all the love and dignity they deserve.</p>
+    <div class="hero-actions">
+      <a href="#story" class="btn-white-ghost" style="font-size:16px;padding:16px 44px;font-weight:600;letter-spacing:0.02em;">Our Story</a>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4">
-    <a href="#home" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">Home</a>
-    <a href="#about" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">About</a>
-    <a href="#contact" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">Contact</a>
-    <a href="#location" class="nav-link-mobile block py-2 transition text-gray-600 hover:text-red-500">Location</a>
-    <a href="#donate" class="nav-link-mobile block py-2 text-red-500 font-medium">Donate</a>
+
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-item reveal">
+    <div class="stat-num">500<sup>+</sup></div>
+    <div class="stat-label">People helped across 9 years</div>
   </div>
-</header>
-    
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="hero-bg text-white py-20 md:py-32">
-            <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Bethesda - A Home of care and compasssion</h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Join us at Bethesda  in creating a homeof hope and compassion - your support helps us bring comfort,dignity and care to the elderly..</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#donate" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md transition duration-300">Donate Now</a>
-                    <a href="#about" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-md transition duration-300">Learn More</a>
-                </div>
-            </div>
-        </section>
+  <div class="stat-item reveal" style="transition-delay:0.08s">
+    <div class="stat-num">25<sup>+</sup></div>
+    <div class="stat-label">Residents currently sheltered</div>
+  </div>
+  <div class="stat-item reveal" style="transition-delay:0.16s">
+    <div class="stat-num">50<sup>+</sup></div>
+    <div class="stat-label">Volunteers engaged</div>
+  </div>
+</div>
 
-        <section class="py-16 bg-gray-100">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Our Impact</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
-                        <i data-feather="users" class="w-12 h-12 mx-auto text-red-500 mb-4"></i>
-                        <h3 class="text-4xl font-bold text-gray-800 mb-2">500+</h3>
-                        <p class="text-gray-600">People Helped</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
-                        <i data-feather="globe" class="w-12 h-12 mx-auto text-red-500 mb-4"></i>
-                        <h3 class="text-4xl font-bold text-gray-800 mb-2">25+</h3>
-                        <p class="text-gray-600">Residents Sheltered</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
-                        <i data-feather="award" class="w-12 h-12 mx-auto text-red-500 mb-4"></i>
-                        <h3 class="text-4xl font-bold text-gray-800 mb-2">50+</h3>
-                        <p class="text-gray-600">Volunteers Engaged</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- MISSION CELLS -->
+<section class="section mission" style="padding-top:0;padding-bottom:0;">
+  <div class="mission-grid">
+    <div class="mission-cell reveal">
+      <div class="cell-num">01</div>
+      <div class="cell-title">Elderly Care</div>
+      <p class="cell-body">Round-the-clock medical care, therapies, counselling and emotional support for our senior residents.</p>
+    </div>
+    <div class="mission-cell reveal" style="transition-delay:0.08s">
+      <div class="cell-num">02</div>
+      <div class="cell-title">Mental Wellness</div>
+      <p class="cell-body">Since 2022, we embrace children and adults with mental challenges, offering holistic support and acceptance.</p>
+    </div>
+    <div class="mission-cell reveal" style="transition-delay:0.12s">
+      <div class="cell-num">03</div>
+      <div class="cell-title">Education</div>
+      <p class="cell-body">Funding and serving 2 underprivileged schools in the community, because our mission extends beyond our walls.</p>
+    </div>
+    <div class="mission-cell reveal" style="transition-delay:0.16s">
+      <div class="cell-num">04</div>
+      <div class="cell-title">Rehabilitation</div>
+      <p class="cell-body">More than a shelter — a mini hospital and rehabilitation centre, helping residents regain independence and dignity.</p>
+    </div>
+  </div>
+</section>
 
-        <section class="py-16 bg-red-500 text-white">
-            <div class="max-w-6xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Join Our Cause</h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Your support can change lives. Become a volunteer or make a donation today.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                    
-                    <a href="#contact" class="bg-transparent hover:bg-white hover:text-red-500 border-2 border-white font-bold py-3 px-6 rounded-md transition duration-300">Contact Us</a>
-                </div>
-            </div>
-        </section>
+<div style="height:120px;background:var(--gray-1);"></div>
 
-        <!-- About Section -->
-        <section id="about" class="pt-16">
-            <div class="about-hero text-white py-20 md:py-32">
-                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Story</h1>
-                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Committed to creating lasting change through compassion and action</p>
-                </div>
-            </div>
-        </section>
+<!-- STORY -->
+<section class="story" id="story" style="padding:0;overflow:hidden;">
+  <div class="story-inner">
+    <div class="story-img reveal-scale">
+      <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=900&auto=format&fit=crop" alt="Bethesda care">
 
-        <section class="py-16 bg-gray-100">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Mission</h2>
-                        <p class="text-gray-600 mb-6">For over 9 years, Bethesda has been a shelter for over 300 people, giving all the care, love and dignity they deserve. Our mission started as a care giving center for the elderly people but it has now
- grown into a sanctuary where we also embrace children & adults with mental challenges. We offer them love, care, acceptance & holistic support. At Bethesda, we believe that every person – whether they are old or facing any health issues or
- disabilities – deserves to live with respect, belonging & hope. Our home is more than just a shelter to our residents. It is like a mini hospital & rehabilitation center, providing round-the-clock medical care, therapies, counselling & emotional support.</p>
+    </div>
+    <div class="story-text reveal">
+      <span class="eyebrow">Our Mission</span>
+      <h2 class="h2">Committed to<br><strong>Lasting Change</strong></h2>
+      <p>For over 9 years, Bethesda has been a shelter for over 300 people, giving all the care, love and dignity they deserve.</p>
+      <p>Our mission started as a care giving centre for the elderly but has now grown into a sanctuary where we also embrace children and adults with mental challenges. We offer love, care, acceptance and holistic support.</p>
+      <p>At Bethesda, we believe that every person — whether old or facing health issues or disabilities — deserves to live with respect, belonging and hope. Our home is more than just a shelter to our residents. It is like a mini hospital and rehabilitation centre, providing round-the-clock care.</p>
+      <a href="#contact" class="read-link">Get involved →</a>
+    </div>
+  </div>
+</section>
 
-                    </div>
-                    <div data-aos="fade-left">
-                        <img src="our mission.jpg" alt="Our Team" class="rounded-lg shadow-lg w-full h-78" />
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- VALUES -->
+<section class="section values" style="padding-bottom:0;">
+  <div class="section-center reveal">
+    <span class="eyebrow">What We Stand For</span>
+    <h2 class="h2">Our Core <strong>Values</strong></h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-cell reveal">
+      <div class="value-title">Compassion</div>
+      <p class="value-body">We approach every situation with empathy, treating all individuals with dignity and respect.</p>
+    </div>
+    <div class="value-cell reveal" style="transition-delay:0.08s">
+      <div class="value-title">Integrity</div>
+      <p class="value-body">We maintain the highest ethical standards with full transparency in all operations and use of funds.</p>
+    </div>
+    <div class="value-cell reveal" style="transition-delay:0.16s">
+      <div class="value-title">Community</div>
+      <p class="value-body">We believe in working with communities, not just for them, fostering sustainable solutions from within.</p>
+    </div>
+  </div>
+</section>
 
-        <section class="py-16">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Core Values</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
-                        <i data-feather="heart" class="w-10 h-10 text-red-500 mb-4 mx-auto"></i>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Compassion</h3>
-                        <p class="text-gray-600">We approach every situation with empathy and understanding, treating all individuals with dignity and respect.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
-                        <i data-feather="shield" class="w-10 h-10 text-red-500 mb-4 mx-auto"></i>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Integrity</h3>
-                        <p class="text-gray-600">We maintain the highest ethical standards, ensuring transparency in all our operations and use of funds.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
-                        <i data-feather="users" class="w-10 h-10 text-red-500 mb-4 mx-auto"></i>
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">Community</h3>
-                        <p class="text-gray-600">We believe in working with communities, not just for them, fostering sustainable solutions from within.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- TIMELINE -->
+<section class="timeline-section" id="journey">
+  <div class="section-center reveal" style="max-width:680px;margin:0 auto;">
+    <span class="eyebrow">Our Journey</span>
+    <h2 class="h2">Nine Years of <strong>Hope</strong></h2>
+  </div>
+  <div class="timeline-inner" id="tl-inner">
+    <div class="tl-spine"><div class="tl-spine-fill" id="tl-fill"></div></div>
 
-        <section class="py-16 bg-gray-100">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Our Journey</h2>
-                <div class="relative">
-                    <div class="absolute left-1/2 w-0.5 bg-red-200 h-full -translate-x-1/2"></div>
-                    <div class="relative flex items-center mb-12 justify-start md:justify-start" data-aos="fade-right">
-                        <div class="w-full md:w-5/12 md:pl-10">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <p class="text-red-500 font-semibold">2016</p>
-                                <h4 class="text-xl font-bold my-1 text-gray-800">Foundation Established</h4>
-                                <p class="text-gray-800">Bethesda Old Age Home was founded with a vision to be “A Home of Hope and Compassion.”</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
-                    </div>
-                    <div class="relative flex items-center mb-12 justify-start md:justify-end" data-aos="fade-left">
-                        <div class="w-full md:w-5/12 md:pr-10">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <p class="text-red-500 font-semibold">2018</p>
-                                <h4 class="text-xl font-bold my-1 text-gray-800"> Expanded our care, welcoming more elderly residents in need</h4>
-                                <p class="text-gray-800">We grew our community to over 40 family members, reaching more people than ever with our mission of hope and support.</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
-                    </div>
-                    <div class="relative flex items-center mb-12 justify-start md:justify-start" data-aos="fade-right">
-                        <div class="w-full md:w-5/12 md:pl-10">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <p class="text-red-500 font-semibold">2020</p>
-                                <h4 class="text-xl font-bold my-1 text-gray-800">COVID-19 Response</h4>
-                                <p class="text-gray-800">Despite the pandemic, we continued serving daily meals and medical care, even while struggling with rent and financial challenges.</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
-                    </div>
-                    <div class="relative flex items-center mb-12 justify-start md:justify-end" data-aos="fade-left">
-                        <div class="w-full md:w-5/12 md:pr-10">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <p class="text-red-500 font-semibold">2022</p>
-                                <h4 class="text-xl font-bold my-1 text-gray-800">Mission Extension</h4>
-                                <p class="text-gray-800">Extended our mission to care not only for the elderly, but also for children & adults with mental disabilities.</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
-                    </div>
-                    <div class="relative flex items-center mb-12 justify-start md:justify-start" data-aos="fade-right">
-                        <div class="w-full md:w-5/12 md:pl-10">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <p class="text-red-500 font-semibold">Present</p>
-                                <h4 class="text-xl font-bold my-1 text-gray-800">Ongoing Impact</h4>
-                                <p class="text-gray-800">Providing comfort, dignity, and family-like care to every resident at Bethesda alongside serving and funding 2 unprevileged schools</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="tl-item" data-delay="0">
+      <div class="tl-year">2016</div>
+      <div class="tl-node"><div class="tl-dot"></div><div class="tl-line-seg"></div></div>
+      <div class="tl-content">
+        <div class="tl-chip">Founded</div>
+        <div class="tl-title">Foundation Established</div>
+        <p class="tl-text">Bethesda Old Age Home was founded with a vision to be "A Home of Hope and Compassion" by SM Prabha, drawing on her 25+ years as a nurse.</p>
+      </div>
+    </div>
 
-        <section class="py-16">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Meet Our Leadership</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1759257212156-9944a0e9d6d5?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Founder" class="w-full h-68 object-cover"/>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-1 text-gray-800">SM Prabha</h3>
-                            <p class="text-red-500 mb-4">Founder</p>
-                            <p class="text-gray-600">With over 25 years of experience as a staff nurse, SM Prabha founded Bethesda in 2016 out of her deep desire to serve the elderly and provide care for the mentally challenged, creating a true home of hope and compassion</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
-                        <img src="Rakhi.jpg" alt="Program Director" class="w-full h-68 object-cover"/>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-1  text-gray-800">Rakhi R Krishna</h3>
-                            <p class="text-red-500 mb-4">Program Director</p>
-                            <p class="text-gray-600">Rakhi oversees all program implementations, ensuring our initiatives create sustainable impact in the communities we serve.</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
-                       <img src="https://images.unsplash.com/photo-1759257837613-c82c5f064769?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Finance Director" class="w-full h-68 object-cover"/>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-1 text-gray-800">Alex Paul</h3>
-                            <p class="text-red-500 mb-4">Finance Director</p>
-                            <p class="text-gray-600">Alex manages our financial operations with transparency and efficiency, ensuring donor funds are used effectively.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="tl-item" data-delay="80">
+      <div class="tl-year">2018</div>
+      <div class="tl-node"><div class="tl-dot"></div><div class="tl-line-seg"></div></div>
+      <div class="tl-content">
+        <div class="tl-chip">Growth</div>
+        <div class="tl-title">Expanded Our Care</div>
+        <p class="tl-text">Grew our community to over 40 family members, welcoming more elderly residents and reaching more people than ever with our mission.</p>
+      </div>
+    </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="pt-16">
-            <div class="contact-hero text-white py-20 md:py-32">
-                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Get In Touch</h1>
-                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">We'd love to hear from you. Reach out for questions, partnerships, or volunteer opportunities.</p>
-                </div>
-            </div>
-        </section>
+    <div class="tl-item" data-delay="160">
+      <div class="tl-year">2020</div>
+      <div class="tl-node"><div class="tl-dot"></div><div class="tl-line-seg"></div></div>
+      <div class="tl-content">
+        <div class="tl-chip">Resilience</div>
+        <div class="tl-title">COVID-19 Response</div>
+        <p class="tl-text">Despite the pandemic, we continued serving daily meals and medical care — never leaving our residents behind, even while facing financial challenges.</p>
+      </div>
+    </div>
 
-        <section class="py-16 bg-gray-100">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i data-feather="mail" class="w-8 h-8 text-red-500"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Email Us</h3>
-                        <p class="text-gray-600 mb-4">Have questions? We're happy to help.</p>
-                        <a href="mailto:Bethesdahomeforaged16@gmail.com" class="text-red-500 font-medium hover:text-red-600 transition">Send an Email</a>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card transition duration-300" data-aos="fade-up" data-aos-delay="200">
-                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i data-feather="phone" class="w-8 h-8 text-red-500"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Call Us</h3>
-                        <p class="text-gray-600 mb-4">Talk to our team directly.</p>
-                        <a href="tel:+919148134887" class="text-red-500 font-medium hover:text-red-600 transition">+91 9148134887</a>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
-                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i data-feather="map-pin" class="w-8 h-8 text-red-500"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Visit Us</h3>
-                        <p class="text-gray-600 mb-4">Find us at our main office.</p>
-                        <a href="#location" class="text-red-500 font-medium hover:text-red-600 transition">See Location</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="tl-item" data-delay="240">
+      <div class="tl-year">2022</div>
+      <div class="tl-node"><div class="tl-dot"></div><div class="tl-line-seg"></div></div>
+      <div class="tl-content">
+        <div class="tl-chip">Expansion</div>
+        <div class="tl-title">Mission Extension</div>
+        <p class="tl-text">Extended our mission to care not only for the elderly, but also for children and adults with mental disabilities, and began supporting 2 underprivileged schools.</p>
+      </div>
+    </div>
 
-        <section class="py-16">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Send Us a Message</h2>
-                <div id="contact-form-container" class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required />
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required />
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" required></textarea>
-                        </div>
-                        <div class="text-right">
-                            <button type="submit" id="contact-submit-button" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 disabled:bg-red-300">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+    <div class="tl-item" data-delay="320">
+      <div class="tl-year">Today</div>
+      <div class="tl-node"><div class="tl-dot"></div><div class="tl-line-seg" style="background:transparent"></div></div>
+      <div class="tl-content">
+        <div class="tl-chip">Present</div>
+        <div class="tl-title">Ongoing Impact</div>
+        <p class="tl-text">Providing comfort, dignity and family-like care to every resident at Bethesda, alongside funding and serving 2 underprivileged schools in the area.</p>
+      </div>
+    </div>
 
-        <section class="py-16 bg-gray-100">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
-                <div class="space-y-4">
-                    <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
-                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
-                            <h3 class="text-lg font-bold">How can I donate?</h3>
-                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
-                        </button>
-                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
-                            <div class="text-gray-600 pt-4">
-                                <p>You can donate via direct bank transfer or UPI. Please visit our <a href="#donate" class="text-red-500 hover:underline">Donate Section</a> for all the details.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
-                            <h3 class="text-lg font-bold">How can I volunteer?</h3>
-                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
-                        </button>
-                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
-                             <div class="text-gray-600 pt-4">
-                                <p>We are always looking for passionate individuals to join our cause. Please send us a message through the contact form above with your interest, and we'll get back to you with available opportunities.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
-                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
-                            <h3 class="text-lg font-bold">Is my donation tax-deductible?</h3>
-                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
-                        </button>
-                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
-                             <div class="text-gray-600 pt-4">
-                                <p>Yes, Bethesda Home for aged Trust is a registered non-profit organization. All donations are tax-deductible under section 80G of the Income Tax Act. Please contact us with your donation details to receive your tax receipt.</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="faq-item bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
-                        <button class="faq-button flex justify-between items-center w-full focus:outline-none text-left">
-                            <h3 class="text-lg font-bold">What percentage of my donation goes to the cause?</h3>
-                            <i data-feather="chevron-down" class="faq-icon w-5 h-5 text-red-500 transition-transform duration-300 flex-shrink-0"></i>
-                        </button>
-                        <div class="faq-content transition-all duration-300 ease-in-out overflow-hidden max-h-0">
-                             <div class="text-gray-600 pt-4">
-                               <p>We are committed to transparency. Over 90% of all donations go directly to funding our programs and helping communities. The remaining amount covers essential administrative costs to keep our operations running smoothly.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  </div>
+</section>
 
-        <!-- Location Section -->
-        <section id="location" class="pt-16">
-            <div class="location-hero text-white py-20 md:py-32">
-                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Locations</h1>
-                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Find out where we're making an impact</p>
-                </div>
-            </div>
-        </section>
+<!-- TEAM -->
+<section class="section team" style="background:var(--gray-1);">
+  <div class="section-center reveal">
+    <span class="eyebrow">Leadership</span>
+    <h2 class="h2">Meet Our <strong>Team</strong></h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <img class="team-photo" src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=400&auto=format&fit=crop" alt="SM Prabha">
+      <div class="team-name">SM Prabha</div>
+      <div class="team-role">Founder</div>
+      <p class="team-bio">With over 25 years as a staff nurse, SM Prabha founded Bethesda in 2016 out of her deep desire to serve the elderly and provide care for the mentally challenged.</p>
+    </div>
+    <div class="team-card reveal" style="transition-delay:0.08s">
+      <img class="team-photo" src="https://bethesdahomeforagedtrust.in/Rakhi.jpg" alt="Rakhi R Krishna" onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop'">
+      <div class="team-name">Rakhi R Krishna</div>
+      <div class="team-role">Programme Director</div>
+      <p class="team-bio">Rakhi oversees all programme implementations, ensuring our initiatives create sustainable impact in the communities we serve.</p>
+    </div>
+    <div class="team-card reveal" style="transition-delay:0.16s">
+      <img class="team-photo" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" alt="Alex Paul">
+      <div class="team-name">Alex Paul</div>
+      <div class="team-role">Finance Director</div>
+      <p class="team-bio">Alex manages our financial operations with transparency and efficiency, ensuring donor funds are used effectively to maximise impact.</p>
+    </div>
+  </div>
+</section>
 
-        <section class="py-16">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Headquarters</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 rounded-lg shadow-lg">
-                    <div data-aos="fade-right">
-                        <img src="https://images.unsplash.com/photo-1759259044895-74d5ee97359b?q=80&w=2250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Headquarters Building" class="rounded-lg shadow-md w-full" />
-                    </div>
-                    <div data-aos="fade-left">
-                        <h3 class="text-2xl font-bold mb-4">Bengaluru, India</h3>
-                        <p class="text-gray-600 mb-6">Our main office coordinates all operations and serves as the hub for our administrative, fundraising, and program development activities.</p>
-                        <ul class="space-y-3 text-gray-600 mb-6">
-                            <li class="flex items-start space-x-3">
-                                <i data-feather="map-pin" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
-                                <span>Jangalpalya, Bannerghatta Road, Bengaluru, Karnataka 560083</span>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <i data-feather="phone" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
-                                <span>+91 9148134887</span>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <i data-feather="mail" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
-                                <span>Bethesdahomeforaged16@gmail.com</span>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <i data-feather="clock" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
-                                <span>Available 9am - 5pm</span>
-                            </li>
-                        </ul>
-                        <a href="https://maps.app.goo.gl/1SVL1V4kqqw7xxYj9" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md transition duration-300">Get Directions</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Donate Section -->
-        <section id="donate" class="pt-16">
-             <div class="bank-hero text-white py-20 md:py-32">
-                <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Donate</h1>
-                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Support our cause through direct bank transfers or UPI payments</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-gray-100">
-            <div class="max-w-4xl mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-md bank-card transition duration-300" data-aos="fade-right">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                                <i data-feather="dollar-sign" class="w-6 h-6 text-red-500"></i>
-                            </div>
-                            <h2 class="text-2xl font-bold">Bank Account Details</h2>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-500">Account Name</h3>
-                                <p class="text-lg font-semibold text-gray-800">Bethesda Home for Aged trust</p>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-500">Account Number</h3>
-                                <p class="text-lg font-semibold text-gray-800">89470100006998</p>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-500">Bank Name</h3>
-                                <p class="text-lg font-semibold text-gray-800">Bank of Baroda</p>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-500">IFSC Code</h3>
-                                <p class="text-lg font-semibold text-gray-800">BARBOVJBGHA</p>
-                            </div>
-                            <div>
-                                <h3 class="text-sm font-medium text-gray-500">Branch</h3>
-                                <p class="text-lg font-semibold text-gray-800">Bannerghatta Branch</p>
-                            </div>
-                            <button id="copy-all-button" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 w-full">
-                                Copy All Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md bank-card transition duration-300" data-aos="fade-left">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                                <i data-feather="smartphone" class="w-6 h-6 text-red-500"></i>
-                            </div>
-                            <h2 class="text-2xl font-bold">UPI Payment</h2>
-                        </div>
-                        <div class="text-center flex flex-col justify-between h-full">
-                            <div>
-                                <div class="mb-6">
-                                    <img src="UPI.png" alt="UPI QR Code" class="mx-auto rounded-md" />
-                                    <p class="mt-2 text-sm text-gray-500">Scan the QR code to make an instant payment</p>
-                                </div>
-                                <div class="mb-6">
-                                    <h3 class="text-sm font-medium text-gray-500"> </h3>
-                                    <p class="text-lg font-semibold text-gray-800"> </p>
-                                    <button id="copy-upi-button" class="mt-2 text-red-500 hover:text-red-600 font-medium transition">
-                                        Copy UPI ID
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">More Ways to Give</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-gray-100 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
-                        <i data-feather="gift" class="w-10 h-10 text-red-500 mx-auto mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">In-Kind Donations</h3>
-                        <p class="text-gray-600">Donate goods or services. Contact us for our current needs.</p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
-                        <i data-feather="clock" class="w-10 h-10 text-red-500 mx-auto mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Volunteer</h3>
-                        <p class="text-gray-600">Your time is a valuable gift. <a href="#contact" class="text-red-500 hover:underline">Get in touch</a>.</p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
-                        <i data-feather="share-2" class="w-10 h-10 text-red-500 mx-auto mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Spread the Word</h3>
-                        <p class="text-gray-600">Share our mission with your friends and family.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Bethesda</h3>
-                    <p class="text-gray-400">Committed to making the world a better place through faith and action.</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                        <li><a href="#location" class="text-gray-400 hover:text-white transition">Locations</a></li>
-                        <li><a href="#donate" class="text-gray-400 hover:text-white transition">Donate</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-2">Contact Info</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start space-x-2">
-                            <i data-feather="mail" class="mt-1 flex-shrink-0"></i>
-                            <span>Bethesdahomeforaged16@gmail.com</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-feather="phone"></i>
-                            <span>+91 9148134887</span>
-                        </li>
-                        <li class="flex items-start space-x-2">
-                            <i data-feather="map-pin" class="mt-1 flex-shrink-0"></i>
-                            <span>Jangalpalya, Bannerghatta Road, Bengaluru, Karnataka 560083</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and stories of impact.</p>
-                    <div id="newsletter-container">
-                        <form id="newsletter-form" class="flex">
-                            <input type="email" id="newsletter-email" placeholder="Your email" class="px-4 py-2 bg-white rounded-l-md focus:outline-none text-gray-800 w-full" required />
-                            <button type="submit" id="newsletter-submit-button" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-r-md transition">
-                                <i data-feather="send"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-               <p>&copy; 2024 Bethesda Home for aged Trust. All rights reserved.</p>
-            </div>
+<!-- DONATE -->
+<section class="donate" id="donate">
+  <div class="donate-inner">
+    <span class="eyebrow reveal">Support Our Work</span>
+    <h2 class="h2 reveal" style="color:#fff">Make a <em style="color:rgba(255,255,255,0.5)">Donation</em></h2>
+    <div class="donate-grid">
+      <div class="donate-card reveal">
+        <div class="dc-title">Bank Transfer</div>
+        <div class="bank-row">
+          <div class="bank-row-left"><span class="bl">Account Name</span><span class="bv">Bethesda Home for Aged Trust</span></div>
+          <button class="copy-row-btn" onclick="copyRow(this,'Bethesda Home for Aged Trust')" title="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button>
         </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
-            AOS.init({
-                once: true,
-                duration: 800
-            });
-
-            // Initialize Feather Icons
-            feather.replace();
-
-            // --- Mobile Menu ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = mobileMenuButton.querySelector('i');
-            const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
-
-            mobileMenuButton.addEventListener('click', () => {
-                const isMenuOpen = mobileMenu.classList.toggle('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', isMenuOpen);
-                menuIcon.setAttribute('data-feather', isMenuOpen ? 'x' : 'menu');
-                feather.replace(); // Re-render icon
-            });
-            
-            // Close menu when a link is clicked
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                    menuIcon.setAttribute('data-feather', 'menu');
-                    feather.replace();
-                });
-            });
-
-            // --- Active Nav Link on Scroll ---
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const headerHeight = document.getElementById('header').offsetHeight;
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - headerHeight - 20; // 20px offset
-                    if (pageYOffset >= sectionTop) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').substring(1) === current) {
-                        link.classList.add('active');
-                    }
-                });
-            });
+        <div class="bank-row">
+          <div class="bank-row-left"><span class="bl">Account No.</span><span class="bv">89470100006998</span></div>
+          <button class="copy-row-btn" onclick="copyRow(this,'89470100006998')" title="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button>
+        </div>
+        <div class="bank-row">
+          <div class="bank-row-left"><span class="bl">Bank</span><span class="bv">Bank of Baroda</span></div>
+          <button class="copy-row-btn" onclick="copyRow(this,'Bank of Baroda')" title="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button>
+        </div>
+        <div class="bank-row">
+          <div class="bank-row-left"><span class="bl">IFSC</span><span class="bv">BARBOVJBGHA</span></div>
+          <button class="copy-row-btn" onclick="copyRow(this,'BARBOVJBGHA')" title="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button>
+        </div>
+        <div class="bank-row">
+          <div class="bank-row-left"><span class="bl">Branch</span><span class="bv">Bannerghatta</span></div>
+          <button class="copy-row-btn" onclick="copyRow(this,'Bannerghatta Branch')" title="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button>
+        </div>
+      </div>
+      <div class="donate-card reveal" style="transition-delay:0.08s">
+        <div class="dc-title">UPI Payment</div>
+        <div class="upi-wrap">
+          <img src="https://bethesdahomeforagedtrust.in/UPI.png" alt="UPI QR Code">
+          <p class="upi-note">Scan to pay instantly via any UPI app</p>
+          <button class="copy-all" onclick="copyUpi()">Copy UPI ID</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-            // --- FAQ Accordion ---
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const button = item.querySelector('.faq-button');
-                const content = item.querySelector('.faq-content');
-                const icon = item.querySelector('.faq-icon');
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-center reveal">
+    <span class="eyebrow">Our Gallery</span>
+    <h2 class="h2">Life at <strong>Bethesda</strong></h2>
+  </div>
 
-                button.addEventListener('click', () => {
-                    const isOpen = content.classList.toggle('max-h-0');
-                    if (isOpen) {
-                        content.classList.remove('max-h-0');
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        icon.style.transform = 'rotate(180deg)';
-                    } else {
-                        content.style.maxHeight = '0px';
-                        icon.style.transform = 'rotate(0deg)';
-                    }
-                });
-            });
+  <div class="gs-stage" id="gsStage">
 
-            // --- Contact Form Submission ---
-            const contactForm = document.getElementById('contact-form');
-            const contactFormContainer = document.getElementById('contact-form-container');
-            const contactSubmitButton = document.getElementById('contact-submit-button');
+    <!-- Slide 1 — Video Placeholder (First) -->
+    <div class="gs-slide gs-active gs-video-slide" data-type="video">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#0a0a0a 0%,#111 50%,#0d0d1a 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;position:relative;overflow:hidden;">
+        <!-- Background blur circles -->
+        <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(232,0,61,0.08) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"></div>
+        <!-- Play button -->
+        <div style="width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.35s;position:relative;z-index:1;"
+          onmouseover="this.style.background='rgba(232,0,61,0.25)';this.style.borderColor='rgba(232,0,61,0.6)';this.style.transform='scale(1.08)'"
+          onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.borderColor='rgba(255,255,255,0.18)';this.style.transform='scale(1)'">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="white" style="margin-left:3px"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <!-- Text -->
+        <div style="text-align:center;position:relative;z-index:1;">
+          <div style="font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:8px;">Bethesda — Our Story</div>
+          <div style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.4);letter-spacing:0.04em;">3 MIN DOCUMENTARY · COMING SOON</div>
+        </div>
+        <!-- Fake progress bar -->
+        <div style="display:flex;align-items:center;gap:12px;position:relative;z-index:1;">
+          <span style="font-size:11px;color:rgba(255,255,255,0.25);">0:00</span>
+          <div style="width:220px;height:3px;background:rgba(255,255,255,0.08);border-radius:99px;overflow:hidden;">
+            <div style="width:0%;height:100%;background:rgba(255,255,255,0.25);border-radius:99px;"></div>
+          </div>
+          <span style="font-size:11px;color:rgba(255,255,255,0.25);">3:00</span>
+        </div>
+        <!-- Badge -->
+        <div style="position:absolute;top:32px;left:50%;transform:translateX(-50%);background:rgba(232,0,61,0.15);border:1px solid rgba(232,0,61,0.3);border-radius:999px;padding:4px 14px;font-size:10px;font-weight:700;color:#e8003d;letter-spacing:0.12em;text-transform:uppercase;">Video</div>
+      </div>
+      <div class="gs-slide-overlay" style="background:none;"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">01 / 16</div>
+        <div class="gs-cap-text">Watch our story — a home built on faith and love</div>
+      </div>
+    </div>
 
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                contactSubmitButton.disabled = true;
-                contactSubmitButton.textContent = 'Sending...';
+    <!-- Slide 2 — (was Slide 1) -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1600&auto=format&fit=crop" alt="Care at Bethesda" loading="eager">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">02 / 16</div>
+        <div class="gs-cap-text">Giving care, love and dignity to every resident</div>
+      </div>
+    </div>
 
-                setTimeout(() => {
-                    contactFormContainer.innerHTML = `
-                        <div class="text-center py-10">
-                            <i data-feather="check-circle" class="w-16 h-16 text-green-500 mx-auto mb-4"></i>
-                            <h3 class="text-2xl font-bold text-gray-800">Message Sent!</h3>
-                            <p class="text-gray-600 mt-2">Thank you for reaching out. We will get back to you shortly.</p>
-                        </div>
-                    `;
-                    feather.replace();
+    <!-- Slide 2 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?q=80&w=1600&auto=format&fit=crop" alt="Elderly care" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">03 / 16</div>
+        <div class="gs-cap-text">A warm home for those who need it most</div>
+      </div>
+    </div>
 
-                    setTimeout(() => {
-                         contactFormContainer.innerHTML = '';
-                         contactFormContainer.appendChild(contactForm);
-                         contactForm.reset();
-                         contactSubmitButton.disabled = false;
-                         contactSubmitButton.textContent = 'Send Message';
-                    }, 4000);
-                }, 1500);
-            });
+    <!-- Slide 3 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1600&auto=format&fit=crop" alt="Community" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">04 / 16</div>
+        <div class="gs-cap-text">Building a family of care and belonging</div>
+      </div>
+    </div>
 
-            // --- Newsletter Form Submission ---
-            const newsletterForm = document.getElementById('newsletter-form');
-            const newsletterContainer = document.getElementById('newsletter-container');
-            const newsletterSubmitButton = document.getElementById('newsletter-submit-button');
+    <!-- Slide 4 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=1600&auto=format&fit=crop" alt="Support" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">05 / 16</div>
+        <div class="gs-cap-text">Round-the-clock support and medical care</div>
+      </div>
+    </div>
 
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                newsletterSubmitButton.disabled = true;
-                newsletterSubmitButton.innerHTML = `<i data-feather="loader" class="animate-spin"></i>`;
-                feather.replace();
+    <!-- Slide 5 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1600&auto=format&fit=crop" alt="Meals" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">06 / 16</div>
+        <div class="gs-cap-text">Nutritious meals served with love every day</div>
+      </div>
+    </div>
 
-                setTimeout(() => {
-                    newsletterContainer.innerHTML = `<p class="text-green-400">Thank you for subscribing!</p>`;
-                    
-                    setTimeout(() => {
-                        newsletterContainer.innerHTML = '';
-                        newsletterContainer.appendChild(newsletterForm);
-                        newsletterForm.reset();
-                        newsletterSubmitButton.disabled = false;
-                        newsletterSubmitButton.innerHTML = `<i data-feather="send"></i>`;
-                        feather.replace();
-                    }, 3000);
-                }, 1000);
-            });
-            
-            // --- Copy to Clipboard ---
-            const copyAllButton = document.getElementById('copy-all-button');
-            const copyUpiButton = document.getElementById('copy-upi-button');
-            
-            copyAllButton.addEventListener('click', () => {
-                const bankDetails = {
-                    name: "Bethesda Foundation",
-                    number: "0000 0000 0000",
-                    bank: "State Bank of India",
-                    ifsc: "SBIN00XXXXX",
-                    branch: "Bannerghatta Road, Bengaluru",
-                };
-                const detailsText = `Account Name: ${bankDetails.name}\nAccount Number: ${bankDetails.number}\nBank Name: ${bankDetails.bank}\nIFSC Code: ${bankDetails.ifsc}\nBranch: ${bankDetails.branch}`;
-                navigator.clipboard.writeText(detailsText).then(() => {
-                    copyAllButton.textContent = 'Copied!';
-                    setTimeout(() => { copyAllButton.textContent = 'Copy All Details'; }, 2000);
-                });
-            });
+    <!-- Slide 6 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=1600&auto=format&fit=crop" alt="Children" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">07 / 16</div>
+        <div class="gs-cap-text">Embracing children with open arms since 2022</div>
+      </div>
+    </div>
 
-            copyUpiButton.addEventListener('click', () => {
-               
-                navigator.clipboard.writeText(upiId).then(() => {
-                    copyUpiButton.textContent = 'Copied!';
-                    setTimeout(() => { copyUpiButton.textContent = 'Copy UPI ID'; }, 2000);
-                });
-            });
-        });
-    </script>
-<script type="module" src="/index.tsx"></script>
+    <!-- Slide 7 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1509909756405-be0199881695?q=80&w=1600&auto=format&fit=crop" alt="Garden" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">08 / 16</div>
+        <div class="gs-cap-text">Peaceful spaces for healing and reflection</div>
+      </div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=1600&auto=format&fit=crop" alt="Medical care" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">09 / 16</div>
+        <div class="gs-cap-text">Professional medical care and rehabilitation</div>
+      </div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=1600&auto=format&fit=crop" alt="Volunteers" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">10 / 16</div>
+        <div class="gs-cap-text">50+ volunteers contributing their time and love</div>
+      </div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?q=80&w=1600&auto=format&fit=crop" alt="Education" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">11 / 16</div>
+        <div class="gs-cap-text">Supporting 2 underprivileged schools in our community</div>
+      </div>
+    </div>
+
+    <!-- Slide 11 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1600&auto=format&fit=crop" alt="Therapy" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">12 / 16</div>
+        <div class="gs-cap-text">Therapy and counselling for complete healing</div>
+      </div>
+    </div>
+
+    <!-- Slide 12 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?q=80&w=1600&auto=format&fit=crop" alt="Celebration" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">13 / 16</div>
+        <div class="gs-cap-text">Celebrating every milestone together as a family</div>
+      </div>
+    </div>
+
+    <!-- Slide 13 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1619468129361-605ebea04b44?q=80&w=1600&auto=format&fit=crop" alt="Compassion" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">14 / 16</div>
+        <div class="gs-cap-text">Nine years of compassion, nine years of hope</div>
+      </div>
+    </div>
+
+    <!-- Slide 14 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600&auto=format&fit=crop" alt="Community events" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">15 / 16</div>
+        <div class="gs-cap-text">Community events bringing joy to our residents</div>
+      </div>
+    </div>
+
+    <!-- Slide 15 -->
+    <div class="gs-slide">
+      <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1600&auto=format&fit=crop" alt="Bengaluru" loading="lazy">
+      <div class="gs-slide-overlay"></div>
+      <div class="gs-slide-caption">
+        <div class="gs-cap-num">16 / 16</div>
+        <div class="gs-cap-text">Serving Bengaluru with faith, love and purpose</div>
+      </div>
+    </div>
+
+    <!-- Prev/Next controls -->
+    <div class="gs-controls">
+      <button class="gs-btn" onclick="gsPrev()" aria-label="Previous">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="gs-btn" onclick="gsNext()" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Pause/Play button -->
+    <button class="gs-pause" id="gsPauseBtn" onclick="toggleGalleryPause()" title="Pause/Play">
+      <svg id="gsPauseIcon" width="22" height="22" viewBox="0 0 24 24" fill="white"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+    </button>
+
+
+  </div>
+
+  <!-- Dots -->
+  <div class="gs-dots" id="gsDots"></div>
+
+  <!-- Thumbnails -->
+  <div class="gs-thumbs" id="gsThumbs"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-center reveal" style="text-align:left;max-width:none;margin:0;">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 class="h2">We'd Love to <strong>Hear From You</strong></h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-methods">
+          <div class="cm reveal">
+            <div class="cm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
+            <div>
+              <div class="cm-label">Email</div>
+              <a href="mailto:Bethesdahomeforaged16@gmail.com" class="cm-val">Bethesdahomeforaged16@gmail.com</a>
+            </div>
+          </div>
+          <div class="cm reveal" style="transition-delay:0.06s">
+            <div class="cm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.99 1.2 2 2 0 013 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div>
+              <div class="cm-label">Phone</div>
+              <a href="tel:+919148134887" class="cm-val">+91 91481 34887</a>
+            </div>
+          </div>
+          <div class="cm reveal" style="transition-delay:0.12s">
+            <div class="cm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+            <div>
+              <div class="cm-label">Address</div>
+              <span class="cm-val">Jangalpalya, Bannerghatta Road, Bengaluru 560083</span>
+            </div>
+          </div>
+          <div class="cm reveal" style="transition-delay:0.18s">
+            <div class="cm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <div class="cm-label">Hours</div>
+              <span class="cm-val">9am – 5pm daily</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="form reveal" action="https://formspree.io/f/xgoqkkzn" method="POST" style="transition-delay:0.1s">
+        <div class="fg">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="fg">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="fg">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="How can we help?">
+        </div>
+        <div class="fg">
+          <label>Message</label>
+          <textarea name="message" placeholder="Your message…" rows="4"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New message from Bethesda website">
+        <input type="hidden" name="_next" value="">
+        <button type="submit" class="submit-btn">Send message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">Common <strong>Questions</strong></h2>
+    </div>
+    <div style="margin-top:48px;">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Who are we?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Bethesda Home For Aged Trust is a registered non-profit organisation based in Bengaluru, Karnataka, founded in 2016 by SM Prabha — a nurse with over 25 years of experience. What began as a shelter for the elderly has grown into a full sanctuary that also cares for children and adults with mental challenges. We operate like a mini hospital and rehabilitation centre, providing round-the-clock medical care, therapies, counselling and emotional support. Over 9 years we have sheltered more than 300 residents and helped over 500 people, all while supporting 2 underprivileged schools in our community. We believe every person — regardless of age or ability — deserves to live with dignity, respect and hope.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How can I donate?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>You can donate via direct bank transfer or UPI. Visit our Donate section for full account details and a QR code for instant payment.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How can I volunteer?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>We are always looking for passionate individuals. Send us a message through the contact form with your interest and we will be in touch with available opportunities.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is my donation tax-deductible?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Yes. Bethesda Home for Aged Trust is a registered non-profit. All donations are tax-deductible under Section 80G of the Income Tax Act. Contact us with your donation details for a receipt.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Where does my donation go?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Over 90% of all donations go directly to funding our programmes and residents. The remaining covers essential administrative costs to keep our operations running smoothly.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="loc-inner">
+    <span class="eyebrow reveal" style="margin-bottom:6px;">Find Us</span>
+    <h2 class="h2 reveal" style="margin-bottom:0;">Our <strong>Location</strong></h2>
+    <div class="loc-grid">
+      <div class="loc-details reveal">
+        <div class="ld">
+          <div class="ld-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <div>
+            <div class="ld-label">Address</div>
+            <div class="ld-val">Jangalpalya, Bannerghatta Road,<br>Bengaluru, Karnataka 560083</div>
+          </div>
+        </div>
+        <div class="ld">
+          <div class="ld-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.99 1.2 2 2 0 013 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div>
+            <div class="ld-label">Phone</div>
+            <div class="ld-val"><a href="tel:+919148134887">+91 91481 34887</a></div>
+          </div>
+        </div>
+        <div class="ld">
+          <div class="ld-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
+          <div>
+            <div class="ld-label">Email</div>
+            <div class="ld-val"><a href="mailto:Bethesdahomeforaged16@gmail.com">Bethesdahomeforaged16@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="ld">
+          <div class="ld-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="ld-label">Hours</div>
+            <div class="ld-val">Available 9am – 5pm daily</div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/1SVL1V4kqqw7xxYj9" target="_blank" class="btn-blue" style="align-self:flex-start;margin-top:8px;">Get Directions →</a>
+      </div>
+      <div class="reveal" style="transition-delay:0.1s">
+        <div class="map-wrap">
+          <div class="map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980!2d77.5874634!3d12.8027031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b261960a519%3A0x199769b859439d2!2sBethesda%20Home%20For%20Aged%20Trust!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="map-overlay-card">
+            <div class="map-overlay-title">Bethesda Home For Aged Trust</div>
+            <div class="map-overlay-addr">Jangalpalya, Bannerghatta Road,<br>Bengaluru, Karnataka 560083</div>
+            <a href="https://maps.app.goo.gl/gizsQF6ddGsk8poA8" target="_blank" class="map-overlay-badge">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="ft-brand">Bethesda Home For Aged Trust</div>
+      <p class="ft-tagline">Committed to creating a home of hope and compassion for the elderly, children and adults with mental challenges since 2016.</p>
+      <div class="ft-social">
+        <a href="https://www.facebook.com/people/Bethesda-Home-for-Aged-Trust/100067110367164/" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="ft-heading">Contact</div>
+      <ul class="ft-links">
+        <li><a href="mailto:Bethesdahomeforaged16@gmail.com">Email Us</a></li>
+        <li><a href="tel:+919148134887">+91 91481 34887</a></li>
+        <li><a href="#location">Bannerghatta Road, Bengaluru</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-heading">Get Involved</div>
+      <ul class="ft-links">
+        <li><a href="#contact">Volunteer</a></li>
+        <li><a href="#contact">Partner With Us</a></li>
+        <li><a href="#" onclick="openAdmin(event)" style="color:rgba(255,255,255,0.2);">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="ft-copy">© 2025 Bethesda Home for Aged Trust. All rights reserved.</div>
+    <div class="ft-right" style="color:rgba(255,255,255,0.6);font-weight:700;font-size:12px;">Registered Non-Profit · Section 80G Tax Exempt</div>
+  </div>
+</footer>
+
+<script>
+// ══ SCROLL PROGRESS BAR ══
+const progressBar = document.getElementById('scroll-progress');
+const scrollTopBtn = document.getElementById('scroll-top');
+window.addEventListener('scroll',()=>{
+  const scrolled = window.scrollY;
+  const total    = document.documentElement.scrollHeight - window.innerHeight;
+  const pct      = total > 0 ? (scrolled/total)*100 : 0;
+  if(progressBar) progressBar.style.width = pct+'%';
+  if(scrollTopBtn){
+    scrollTopBtn.classList.toggle('visible', scrolled > 400);
+  }
+},{passive:true});
+
+// ══ GENERAL REVEAL OBSERVER — bidirectional ══
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+    } else {
+      // only remove if fully out of viewport to avoid jank
+      if(e.boundingClientRect.top > window.innerHeight || e.boundingClientRect.bottom < 0){
+        e.target.classList.remove('in');
+      }
+    }
+  });
+},{threshold:0.12,rootMargin:'0px'});
+document.querySelectorAll('.reveal,.reveal-scale').forEach(el=>io.observe(el));
+
+// ══ TIMELINE CINEMATIC OBSERVER ══
+const tlItems = document.querySelectorAll('.tl-item');
+const tlFill  = document.getElementById('tl-fill');
+const tlInner = document.getElementById('tl-inner');
+
+const tlObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const delay = parseInt(e.target.dataset.delay)||0;
+      setTimeout(()=>e.target.classList.add('tl-visible'), delay);
+    } else {
+      // remove class so animation re-fires when user scrolls back
+      e.target.classList.remove('tl-visible');
+    }
+  });
+},{threshold:0.2,rootMargin:'0px 0px -40px 0px'});
+
+tlItems.forEach(item=>tlObserver.observe(item));
+
+// Timeline spine fill on scroll
+if(tlInner && tlFill){
+  const spineObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const rect   = tlInner.getBoundingClientRect();
+        const viewH  = window.innerHeight;
+        const progress = Math.min(Math.max((viewH - rect.top)/(rect.height + viewH)*1.6,0),1);
+        tlFill.style.height = (progress*100)+'%';
+      }
+    });
+  },{threshold:Array.from({length:20},(_,i)=>i/20)});
+  spineObs.observe(tlInner);
+
+  window.addEventListener('scroll',()=>{
+    if(!tlInner) return;
+    const rect   = tlInner.getBoundingClientRect();
+    const viewH  = window.innerHeight;
+    // Only update when section is actually in view
+    if(rect.bottom < 0 || rect.top > viewH) return;
+    const progress = Math.min(Math.max((viewH - rect.top)/(rect.height*0.85),0),1);
+    if(tlFill) tlFill.style.height = (progress*100)+'%';
+  },{passive:true});
+}
+
+// ── Nav stays white always — no scroll change needed
+
+// ── Mobile nav ──
+function toggleMobileNav(){document.getElementById('mobileNav').classList.toggle('open');}
+function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}
+
+// ── FAQ accordion ──
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+// ── Copy ──
+function copyBank(){
+  const t = 'Account Name: Bethesda Home for Aged Trust\nAccount Number: 89470100006998\nBank: Bank of Baroda\nIFSC: BARBOVJBGHA\nBranch: Bannerghatta Branch';
+  navigator.clipboard.writeText(t).then(()=>{
+    const btn = event.target;
+    btn.textContent = 'Copied!';
+    setTimeout(()=>btn.textContent='Copy all details',2000);
+  });
+}
+function copyRow(btn, text){
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.classList.add('copied');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    setTimeout(()=>{ btn.innerHTML = orig; btn.classList.remove('copied'); }, 1800);
+  }).catch(()=>{
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+    btn.classList.add('copied');
+    setTimeout(()=>btn.classList.remove('copied'), 1800);
+  });
+}
+function copyUpi(){
+  navigator.clipboard.writeText('bethesdahomeforaged16@oksbi').then(()=>{
+    const btn = event.target;
+    btn.textContent = 'Copied!';
+    setTimeout(()=>btn.textContent='Copy UPI ID',2000);
+  });
+}
+
+// Contact form handled by Formspree (native POST)
+
+// ══ GALLERY SLIDESHOW ══
+// Wait for DOM so all slides are present
+document.addEventListener('DOMContentLoaded', function(){
+  const slides   = Array.from(document.querySelectorAll('.gs-slide'));
+  const dotsWrap = document.getElementById('gsDots');
+  const thumbsWrap= document.getElementById('gsThumbs');
+  const progress = null; // progress bar removed
+  const TOTAL    = slides.length;
+  const INTERVAL = 5000;
+  let current    = 0;
+  let timer      = null;
+
+  if(!TOTAL) return; // no slides found — bail
+
+  // ── Build dots ──
+  dotsWrap.innerHTML = '';
+  for(let i=0;i<TOTAL;i++){
+    const d=document.createElement('div');
+    d.className='gs-dot'+(i===0?' active':'');
+    d.addEventListener('click',()=>goTo(i));
+    dotsWrap.appendChild(d);
+  }
+
+  // ── Build thumbnails — guard video slide (no <img>) ──
+  thumbsWrap.innerHTML = '';
+  slides.forEach((s,i)=>{
+    const th = document.createElement('div');
+    th.className = 'gs-thumb'+(i===0?' active':'');
+    th.addEventListener('click',()=>goTo(i));
+    const imgEl = s.querySelector('img');
+    if(imgEl){
+      // Normal image slide
+      const img = document.createElement('img');
+      img.src = imgEl.src;
+      img.alt = '';
+      img.loading = 'lazy';
+      th.appendChild(img);
+    } else {
+      // Video placeholder slide — show a dark tile with play icon
+      th.style.cssText = 'background:#111;display:flex;align-items:center;justify-content:center;';
+      th.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+    }
+    thumbsWrap.appendChild(th);
+  });
+
+  // ── goTo: transition between slides ──
+  function goTo(idx){
+    const prev = current;
+    current = ((idx % TOTAL) + TOTAL) % TOTAL;
+    if(prev === current) return;
+
+    slides[prev].classList.remove('gs-active');
+    slides[prev].classList.add('gs-prev');
+    setTimeout(()=>{ slides[prev].classList.remove('gs-prev'); }, 950);
+
+    slides[current].classList.add('gs-active');
+
+    // Update dots
+    dotsWrap.querySelectorAll('.gs-dot').forEach((d,i)=>d.classList.toggle('active',i===current));
+    // Update thumbs
+    const thumbs = thumbsWrap.querySelectorAll('.gs-thumb');
+    thumbs.forEach((t,i)=>t.classList.toggle('active',i===current));
+    const activeThumb = thumbs[current];
+    if(activeThumb && thumbsWrap){
+      thumbsWrap.scrollLeft = activeThumb.offsetLeft - thumbsWrap.offsetWidth/2 + activeThumb.offsetWidth/2;
+    }
+
+    resetProgress();
+  }
+
+  // ── Progress bar ──
+  function resetProgress(){
+    if(!progress) return;
+    progress.style.transition = 'none';
+    progress.style.width = '0%';
+    requestAnimationFrame(()=>{
+      requestAnimationFrame(()=>{
+        progress.style.transition = 'width '+INTERVAL+'ms linear';
+        progress.style.width = '100%';
+      });
+    });
+  }
+
+  // ── Exposed globally so HTML onclick works ──
+  function gsNext(){ goTo(current+1); restartAuto(); }
+  function gsPrev(){ goTo(current-1); restartAuto(); }
+  window.gsNext = gsNext;
+  window.gsPrev = gsPrev;
+
+  // ── Keyboard ──
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'){ gsNext(); }
+    if(e.key==='ArrowLeft'){  gsPrev(); }
+  });
+
+  // ── Auto-play ──
+  function startAuto(){ timer = setInterval(()=>goTo(current+1), INTERVAL); }
+  function stopAuto(){  clearInterval(timer); timer=null; }
+  function restartAuto(){ stopAuto(); startAuto(); }
+
+  const stage = document.getElementById('gsStage');
+  if(stage){
+    stage.addEventListener('mouseenter', stopAuto);
+    stage.addEventListener('mouseleave', ()=>{ startAuto(); resetProgress(); });
+    // Touch swipe
+    let startX = 0;
+    stage.addEventListener('touchstart', e=>{ startX=e.touches[0].clientX; },{passive:true});
+    stage.addEventListener('touchend',   e=>{
+      const diff = startX - e.changedTouches[0].clientX;
+      if(Math.abs(diff)>40){ diff>0 ? gsNext() : gsPrev(); }
+    });
+  }
+
+  // Expose controls for pause button & external auto-pause
+  window._galleryStart = ()=>{ startAuto(); resetProgress(); };
+  window._galleryStop  = stopAuto;
+
+  // ── Auto-pause when gallery scrolls out of view ──
+  const gallerySection = document.getElementById('gallery');
+  if(gallerySection){
+    const visObs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(!e.isIntersecting){
+          // User scrolled away — pause and show play icon
+          if(!galleryPaused){
+            stopAuto();
+            const icon = document.getElementById('gsPauseIcon');
+            const btn  = document.getElementById('gsPauseBtn');
+            if(icon) icon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+            if(btn)  btn.classList.add('paused');
+            galleryPaused = true;
+          }
+        } else {
+          // Scrolled back into view — auto-resume
+          if(galleryPaused){
+            startAuto(); resetProgress();
+            const icon = document.getElementById('gsPauseIcon');
+            const btn  = document.getElementById('gsPauseBtn');
+            if(icon) icon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+            if(btn)  btn.classList.remove('paused');
+            galleryPaused = false;
+          }
+        }
+      });
+    },{threshold:0.15});
+    visObs.observe(gallerySection);
+  }
+
+  // Kick off
+  startAuto();
+  resetProgress();
+});
+
+
+// ══ BULK GOOGLE DRIVE FOLDER IMPORT ══
+async function adminImportFolder(){
+  const raw = document.getElementById('admin-folder-url').value.trim();
+  const statusEl = document.getElementById('admin-import-status');
+  const btn = document.getElementById('admin-import-btn');
+
+  if(!raw){ alert('Please paste a Google Drive folder URL.'); return; }
+
+  // Extract folder ID from various Drive URL formats
+  const folderMatch = raw.match(/folders\/([a-zA-Z0-9_-]{10,})/);
+  if(!folderMatch){ alert('Could not find a folder ID in that URL.\nMake sure you paste a Google Drive folder link.'); return; }
+  const folderId = folderMatch[1];
+
+  btn.textContent = 'Importing…';
+  btn.disabled = true;
+  statusEl.style.display = 'block';
+  statusEl.textContent = 'Fetching folder contents…';
+
+  try {
+    // Use the public Drive folder RSS/JSON feed
+    const apiUrl = `https://drive.google.com/drive/folders/${folderId}`;
+    // We use the public embeddedfolderview which returns HTML we can parse for file IDs
+    const proxyUrl = `https://drive.google.com/embeddedfolderview?id=${folderId}#list`;
+    const resp = await fetch(proxyUrl);
+    const html = await resp.text();
+
+    // Parse file IDs from the embedded folder view HTML
+    const idMatches = [...html.matchAll(/\/file\/d\/([a-zA-Z0-9_-]{20,})\//g)];
+    const uniqueIds = [...new Set(idMatches.map(m => m[1]))];
+
+    if(uniqueIds.length === 0){
+      statusEl.style.color = '#e8003d';
+      statusEl.textContent = '⚠️ No files found. Make sure the folder is shared publicly (Anyone with the link → Viewer).';
+      btn.textContent = 'Import All Images'; btn.disabled = false;
+      return;
+    }
+
+    // Image MIME extensions we accept — filter by trying to load each as an image
+    const IMAGE_EXTS = /\.(jpg|jpeg|png|gif|webp|bmp|svg)(\?|$)/i;
+    const VIDEO_EXTS = /\.(mp4|mov|avi|mkv|webm|m4v|wmv)(\?|$)/i;
+
+    let added = 0, skipped = 0;
+    statusEl.textContent = `Found ${uniqueIds.length} files. Checking for images…`;
+
+    for(const id of uniqueIds){
+      const imgUrl = `https://drive.google.com/uc?export=view&id=${id}`;
+      // Test if the URL loads as an image
+      const isImage = await new Promise(resolve => {
+        const testImg = new Image();
+        testImg.onload = () => resolve(true);
+        testImg.onerror = () => resolve(false);
+        testImg.src = imgUrl;
+        // Timeout after 6s
+        setTimeout(() => resolve(false), 6000);
+      });
+
+      if(isImage){
+        // Add to gallery
+        const stage = document.getElementById('gsStage');
+        const controls = stage.querySelector('.gs-controls');
+        const newSlide = document.createElement('div');
+        newSlide.className = 'gs-slide';
+        newSlide.innerHTML = `<img src="${imgUrl}" alt="Gallery image" style="width:100%;height:100%;object-fit:cover;">
+          <div class="gs-slide-overlay"></div>
+          <div class="gs-slide-caption"><div class="gs-cap-num">Photo</div><div class="gs-cap-text"></div></div>`;
+        stage.insertBefore(newSlide, controls);
+        // Add thumbnail
+        const thumbsEl = document.querySelector('.gs-thumbs');
+        if(thumbsEl){
+          const t = document.createElement('div');
+          t.className = 'gs-thumb';
+          t.innerHTML = `<img src="${imgUrl}" alt="">`;
+          thumbsEl.appendChild(t);
+        }
+        added++;
+        statusEl.textContent = `Importing… ${added} images added so far (${skipped} skipped).`;
+      } else {
+        skipped++;
+      }
+    }
+
+    adminRenderGalleryGrid();
+    statusEl.style.color = '#1d1d1f';
+    statusEl.innerHTML = `✅ Done! <strong>${added} image${added!==1?'s':''}</strong> imported, ${skipped} non-image file${skipped!==1?'s':''} skipped.`;
+    document.getElementById('admin-folder-url').value = '';
+
+  } catch(err){
+    statusEl.style.color = '#e8003d';
+    statusEl.textContent = `⚠️ Error: ${err.message}. Make sure the folder is shared publicly.`;
+  }
+
+  btn.textContent = 'Import All Images';
+  btn.disabled = false;
+}
+
+
+let galleryPaused = false;
+function toggleGalleryPause(){
+  galleryPaused = !galleryPaused;
+  const icon = document.getElementById('gsPauseIcon');
+  const btn  = document.getElementById('gsPauseBtn');
+  if(galleryPaused){
+    if(icon) icon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+    if(btn)  btn.classList.add('paused');
+    if(window._galleryStop) window._galleryStop();
+  } else {
+    if(icon) icon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+    if(btn)  btn.classList.remove('paused');
+    if(window._galleryStart) window._galleryStart();
+  }
+}
+
+
+// ══ ADMIN PANEL ══
+const ADMIN_CREDS = {user:'admin', pass:'bethesda2024'};
+let adminLoggedIn = false;
+
+function openAdmin(e){
+  if(e) e.preventDefault();
+  document.getElementById('admin-overlay').classList.add('open');
+  if(adminLoggedIn) showAdminDash(); else showAdminLogin();
+}
+function closeAdmin(){
+  document.getElementById('admin-overlay').classList.remove('open');
+}
+function closeAdminOutside(e){
+  if(e.target===document.getElementById('admin-overlay')) closeAdmin();
+}
+function showAdminLogin(){
+  document.getElementById('admin-login-pane').style.display='block';
+  document.getElementById('admin-dash-pane').style.display='none';
+  setTimeout(()=>document.getElementById('admin-user').focus(),100);
+}
+function showAdminDash(){
+  document.getElementById('admin-login-pane').style.display='none';
+  document.getElementById('admin-dash-pane').style.display='block';
+  adminRenderGalleryGrid();
+}
+function adminLogin(){
+  const u=document.getElementById('admin-user').value.trim();
+  const p=document.getElementById('admin-pass').value;
+  const err=document.getElementById('admin-err');
+  if(u===ADMIN_CREDS.user && p===ADMIN_CREDS.pass){
+    adminLoggedIn=true;
+    err.style.display='none';
+    showAdminDash();
+  } else {
+    err.style.display='block';
+    document.getElementById('admin-pass').value='';
+    document.getElementById('admin-pass').focus();
+  }
+}
+function adminLogout(){
+  adminLoggedIn=false;
+  showAdminLogin();
+}
+
+// Gallery management
+function adminRenderGalleryGrid(){
+  const grid=document.getElementById('admin-gallery-grid');
+  if(!grid) return;
+  const slides=Array.from(document.querySelectorAll('.gs-slide'));
+  grid.innerHTML=slides.map((s,i)=>{
+    const imgEl=s.querySelector('img');
+    const src=imgEl?imgEl.src:'';
+    const isVideo=s.classList.contains('gs-video-slide');
+    return `<div class="admin-thumb" onclick="adminReplaceSlide(${i})" title="Click to replace">
+      ${isVideo
+        ? '<div style="width:100%;height:100%;background:#111;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>'
+        : `<img src="${src}" alt="">`}
+      <div class="admin-thumb-num">${i+1}</div>
+    </div>`;
+  }).join('');
+}
+
+function adminReplaceSlide(idx){
+  const url=prompt('Enter new image URL for slide '+(idx+1)+':');
+  if(!url||!url.startsWith('http')) return;
+  const slides=Array.from(document.querySelectorAll('.gs-slide'));
+  const s=slides[idx];
+  if(!s) return;
+  let imgEl=s.querySelector('img');
+  if(imgEl){ imgEl.src=url; }
+  else {
+    // Was video — add image
+    const div=s.querySelector('div');
+    if(div){ div.style.display='none'; }
+    const newImg=document.createElement('img');
+    newImg.src=url;newImg.style.cssText='width:100%;height:100%;object-fit:cover;';
+    s.insertBefore(newImg,s.firstChild);
+  }
+  adminRenderGalleryGrid();
+  // Update thumbnail
+  const thumbs=Array.from(document.querySelectorAll('.gs-thumb'));
+  if(thumbs[idx]){
+    const ti=thumbs[idx].querySelector('img');
+    if(ti) ti.src=url;
+    else { thumbs[idx].innerHTML=''; const ni=document.createElement('img');ni.src=url;thumbs[idx].appendChild(ni); }
+  }
+  alert('Slide '+(idx+1)+' updated! This change is live on this device only.');
+}
+
+function adminAddImage(){
+  const url=document.getElementById('admin-new-img').value.trim();
+  if(!url||!url.startsWith('http')){ alert('Please enter a valid image URL'); return; }
+  // Add new slide to gallery
+  const stage=document.getElementById('gsStage');
+  const controls=stage.querySelector('.gs-controls');
+  const newSlide=document.createElement('div');
+  newSlide.className='gs-slide';
+  newSlide.innerHTML=`<img src="${url}" alt="Gallery image" style="width:100%;height:100%;object-fit:cover;">
+    <div class="gs-slide-overlay"></div>
+    <div class="gs-slide-caption"><div class="gs-cap-num">New</div><div class="gs-cap-text">Photo</div></div>`;
+  stage.insertBefore(newSlide, controls);
+  document.getElementById('admin-new-img').value='';
+  adminRenderGalleryGrid();
+  alert('Image added to gallery! Reload the page to see updated slide count.');
+}
+
+function adminUpdateTeamPhoto(idx){
+  const url = document.getElementById('team-url-'+idx).value.trim();
+  if(!url||!url.startsWith('http')){ alert('Enter a valid image URL'); return; }
+  document.getElementById('team-photo-'+idx).src = url;
+  const teamPhotos = document.querySelectorAll('.team-photo');
+  if(teamPhotos[idx]) teamPhotos[idx].src = url;
+  document.getElementById('team-url-'+idx).value = '';
+  alert('Leader photo updated live on this device!');
+}
+
+function adminUpdateLogo(){
+  const url=document.getElementById('admin-logo-url').value.trim();
+  if(!url||!url.startsWith('http')){ alert('Enter a valid image URL'); return; }
+  document.getElementById('admin-logo-preview').src=url;
+  // Update all nav logos
+  document.querySelectorAll('.nav-logo img').forEach(img=>img.src=url);
+  document.getElementById('admin-logo-url').value='';
+  alert('Logo updated on this device!');
+}
+
+</script>
+
+<!-- ══ ADMIN PANEL ══ -->
+<div id="admin-overlay" onclick="closeAdminOutside(event)">
+  <div id="admin-modal">
+    <!-- Login Pane -->
+    <div id="admin-login-pane">
+      <div class="admin-header">
+        <div>
+          <div class="admin-badge">Admin Access</div>
+          <div class="admin-title">Welcome Back</div>
+        </div>
+        <button class="admin-close" onclick="closeAdmin()">✕</button>
+      </div>
+      <div class="admin-fg">
+        <label>Username</label>
+        <input type="text" id="admin-user" placeholder="admin" autocomplete="off">
+      </div>
+      <div class="admin-fg">
+        <label>Password</label>
+        <input type="password" id="admin-pass" placeholder="••••••••" onkeydown="if(event.key==='Enter')adminLogin()">
+      </div>
+      <button class="admin-btn" onclick="adminLogin()">Sign In →</button>
+      <div class="admin-err" id="admin-err">Incorrect username or password</div>
+    </div>
+
+    <!-- Dashboard Pane -->
+    <div id="admin-dash-pane" style="display:none;">
+      <div class="admin-header">
+        <div>
+          <div class="admin-badge">Admin Dashboard</div>
+          <div class="admin-title">Manage Content</div>
+        </div>
+        <button class="admin-close" onclick="closeAdmin()">✕</button>
+      </div>
+
+      <!-- Logo -->
+      <div class="admin-section">
+        <div class="admin-section-title">Logo / Branding</div>
+        <img id="admin-logo-preview" class="admin-logo-preview"
+          src="https://github.com/alexpaul8080-cmyk/Bethesda.com/blob/main/New%20Logo.jpg?raw=true" alt="Logo">
+        <div class="admin-add-row">
+          <input type="text" id="admin-logo-url" placeholder="Paste new logo image URL…">
+          <button onclick="adminUpdateLogo()">Update</button>
+        </div>
+      </div>
+
+      <!-- Gallery Images -->
+      <div class="admin-section">
+        <div class="admin-section-title">Gallery Images (click to replace)</div>
+        <div class="admin-gallery-grid" id="admin-gallery-grid"></div>
+
+        <!-- Bulk folder upload -->
+        <div style="margin-top:18px;">
+          <div style="font-size:12px;font-weight:700;color:var(--gray-5);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;">Bulk Import from Google Drive Folder</div>
+          <div class="admin-add-row" style="align-items:stretch;">
+            <input type="text" id="admin-folder-url" placeholder="Paste Google Drive folder URL…" style="flex:1;">
+            <button onclick="adminImportFolder()" id="admin-import-btn">Import All Images</button>
+          </div>
+          <div id="admin-import-status" style="display:none;font-size:12px;color:var(--accent);margin-top:8px;padding:10px 14px;background:rgba(0,113,227,0.06);border-radius:8px;line-height:1.6;"></div>
+          <div style="font-size:11px;color:var(--gray-4);margin-top:8px;line-height:1.6;">
+            Share your Google Drive folder publicly (Anyone with the link → Viewer), then paste the folder URL above. All images will be imported and videos skipped automatically.
+          </div>
+        </div>
+
+        <!-- Single image add (fallback) -->
+        <div style="margin-top:16px;">
+          <div style="font-size:12px;font-weight:700;color:var(--gray-5);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;">Add Single Image</div>
+          <div class="admin-add-row">
+            <input type="text" id="admin-new-img" placeholder="Paste image URL…">
+            <button onclick="adminAddImage()">Add</button>
+          </div>
+        </div>
+
+        <div class="admin-info" style="margin-top:12px;">Changes apply live to the gallery on this device. To make permanent changes for all visitors, update the HTML file and re-upload to GitHub.</div>
+      </div>
+
+      <!-- Meet Our Leaders -->
+      <div class="admin-section">
+        <div class="admin-section-title">Meet Our Leaders — Photos</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+
+          <div class="admin-team-row">
+            <img id="team-photo-0" class="admin-team-thumb" src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=400&auto=format&fit=crop" alt="SM Prabha">
+            <div style="flex:1;">
+              <div style="font-size:13px;font-weight:700;color:var(--black);margin-bottom:2px;">SM Prabha</div>
+              <div style="font-size:11px;color:var(--gray-4);margin-bottom:8px;">Founder</div>
+              <div class="admin-add-row" style="margin:0;">
+                <input type="text" id="team-url-0" placeholder="Paste new photo URL…">
+                <button onclick="adminUpdateTeamPhoto(0)">Update</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-team-row">
+            <img id="team-photo-1" class="admin-team-thumb" src="https://bethesdahomeforagedtrust.in/Rakhi.jpg" alt="Rakhi R Krishna" onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop'">
+            <div style="flex:1;">
+              <div style="font-size:13px;font-weight:700;color:var(--black);margin-bottom:2px;">Rakhi R Krishna</div>
+              <div style="font-size:11px;color:var(--gray-4);margin-bottom:8px;">Programme Director</div>
+              <div class="admin-add-row" style="margin:0;">
+                <input type="text" id="team-url-1" placeholder="Paste new photo URL…">
+                <button onclick="adminUpdateTeamPhoto(1)">Update</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-team-row">
+            <img id="team-photo-2" class="admin-team-thumb" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" alt="Alex Paul">
+            <div style="flex:1;">
+              <div style="font-size:13px;font-weight:700;color:var(--black);margin-bottom:2px;">Alex Paul</div>
+              <div style="font-size:11px;color:var(--gray-4);margin-bottom:8px;">Finance Director</div>
+              <div class="admin-add-row" style="margin:0;">
+                <input type="text" id="team-url-2" placeholder="Paste new photo URL…">
+                <button onclick="adminUpdateTeamPhoto(2)">Update</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <span class="admin-logout" onclick="adminLogout()">Sign out of admin</span>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
